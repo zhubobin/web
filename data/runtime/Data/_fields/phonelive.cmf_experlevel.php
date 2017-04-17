@@ -1,0 +1,1 @@
+a:6:{i:0;s:7:"levelid";i:1;s:9:"levelname";i:2;s:8:"level_up";i:3;s:7:"addtime";s:3:"_pk";s:7:"levelid";s:5:"_type";a:4:{s:7:"levelid";s:16:"int(11) unsigned";s:9:"levelname";s:11:"varchar(50)";s:8:"level_up";s:16:"int(20) unsigned";s:7:"addtime";s:7:"int(11)";}}

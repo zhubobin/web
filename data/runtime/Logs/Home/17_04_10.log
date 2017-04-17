@@ -1,0 +1,80 @@
+[ 2017-04-10T17:42:07+08:00 ] 192.168.1.105 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /var/www/html/simplewind/Core/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000232s ]
+
+[ 2017-04-10T19:21:59+08:00 ] 192.168.1.105 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /var/www/html/simplewind/Core/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000218s ]
+
+[ 2017-04-10T19:29:38+08:00 ] 192.168.1.105 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /var/www/html/simplewind/Core/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000250s ]
+
+[ 2017-04-10T18:15:38+08:00 ] 192.168.1.105 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /var/www/html/simplewind/Core/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0003s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000230s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000262s ]
+
+[ 2017-04-10T18:23:24+08:00 ] 192.168.1.105 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /var/www/html/simplewind/Core/Common/functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000240s ]
+
