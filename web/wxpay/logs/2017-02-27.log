@@ -1,6 +1,0 @@
-[2017-02-27 11:34:58][debug] begin notify
-[2017-02-27 11:34:58][debug] call back:{"appid":"wxdbba8ae5cc57d71e","attach":"test","bank_type":"CFT","cash_fee":"10","fee_type":"CNY","is_subscribe":"Y","mch_id":"1230458202","nonce_str":"t74z6y5czgkhxfmfpcn82bj27ak0qf12","openid":"oT36SuPYQbhLvvtEt8JGd05fkBCg","out_trade_no":"7749_20170227113450561","result_code":"SUCCESS","return_code":"SUCCESS","sign":"824DB5FAF0BDEED3D6655315CD9912C1","time_end":"20170227113457","total_fee":"10","trade_type":"JSAPI","transaction_id":"4005682001201702271495956845"}
-[2017-02-27 11:35:00][debug] query:{"appid":"wxdbba8ae5cc57d71e","attach":"test","bank_type":"CFT","cash_fee":"10","fee_type":"CNY","is_subscribe":"Y","mch_id":"1230458202","nonce_str":"Etbdac0jfouwWCHc","openid":"oT36SuPYQbhLvvtEt8JGd05fkBCg","out_trade_no":"7749_20170227113450561","result_code":"SUCCESS","return_code":"SUCCESS","return_msg":"OK","sign":"FA4D1A2453F312D11B3BF8F683DE0819","time_end":"20170227113457","total_fee":"10","trade_state":"SUCCESS","trade_type":"JSAPI","transaction_id":"4005682001201702271495956845"}
-[2017-02-27 11:35:00][debug] 已进入
-[2017-02-27 11:35:00][debug] select * from cmf_users_charge where orderno='7749_20170227113450561' and money='0.1' and status='0' and type='2'
-[2017-02-27 11:35:00][debug] 支付成功

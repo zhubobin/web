@@ -162,11 +162,10 @@ class Api_User extends Api_Common {
 	 * @return string msg 提示信息
 	 */
 	public function getBaseInfo() {
-		echo 1111;exit;
 		$rs = array('code' => 0, 'msg' => '', 'info' => array());
 		
 		$checkToken=$this->checkToken($this->uid,$this->token);
-		if($checkToken==700){
+		if($checkToken==7000){
 			$rs['code'] = $checkToken;
 			$rs['msg'] = 'Token错误或已过期，请重新登录';
 			return $rs;
