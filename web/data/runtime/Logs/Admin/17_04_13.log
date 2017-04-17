@@ -1,0 +1,16 @@
+[ 2017-04-13T14:47:16+08:00 ] 192.168.1.102 /web/index.php?g=Admin&m=Charge&a=index&menuid=168
+ERR: 1054:Unknown column 'guzi' in 'field list'
+ [ SQL语句 ] : SELECT SUM(guzi) AS tp_sum FROM `cmf_users_charge` LIMIT 1  
+
+[ 2017-04-13T15:04:09+08:00 ] 192.168.1.102 /web/index.php?g=Admin&m=Menu&a=index&menuid=100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-13T15:04:19+08:00 ] 192.168.1.102 /web/index.php?g=Admin&m=Menu&a=edit&id=293&menuid=100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-13T15:04:28+08:00 ] 192.168.1.102 /web/index.php?g=Admin&m=Menu&a=edit&id=293&menuid=100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-13T15:17:48+08:00 ] 192.168.1.102 /web/index.php?g=Admin&m=User&a=index&menuid=149
+ERR: 无法加载控制器:User
+
