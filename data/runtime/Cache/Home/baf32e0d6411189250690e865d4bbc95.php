@@ -64,13 +64,10 @@
 		<script type="text/javascript" src="/public/home/hxChat/js/webim.js"></script>
 
 		<!-- 环信私信功能end -->
-<title><?php echo ($site_seo_title); ?> - <?php echo ($site_name); ?></title>
-<link type="text/css" rel="stylesheet" href="/public/home/css/index.css"/>
-
+<title><?php echo ($site_name); ?></title>
 </head>
-<body>
-<div class="wrapper">
-		<div id="doc-hd" class="header double">
+<body style="background-color:#f3f3f3">
+	<div id="doc-hd" class="header double">
 		<div class="topbar">
 			<div class="container clearfix">
 				<div class="hd-logo">
@@ -154,53 +151,113 @@
 	</div>
 
 
-				<!-- 热门直播 -->
-				<div class="container">
-				<div class="g-box feed-list" id="hot">
-				<form class="well translate_form" method="post" action="index.php?m=Index&a=translate">
-					<div class="box-hdd">
-						<input name="keyword" class="translate_input" autocomplete="off" tabindex="0" value="<?php echo ($formget["keyword"]); ?>" placeholder="请输入用户名、用户ID"/>
-						<input type="submit" class="translate_primary" value="搜索">
-							<div class="search_count">
-						<span><?php echo ($msg['info']); ?></span>
-						<span class="search_hotkey"><?php echo ($msg['name']); ?></span>
-						<span><?php echo ($msg['result']); ?></span>
-					</div>
-					<?php if($msg['type'] == '0'): ?><div class="search_tuijian_container">
-							<span>推荐其他精彩直播</span>
-						</div><?php endif; ?>
-						
-						
-					</div>
-				
-				</form>
-				<div><hr class="search_line"></div>
-					<div class="box-bd translate_bd">
-						<ul class="list">
-						  <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li class="feed <?php if($v['islive'] == '1'): ?>live<?php else: ?>review<?php endif; ?> ">
-								<a class="link" <?php if($msg['type'] == '0'): ?>href="./<?php echo ($v['uid']); ?>"<?php else: ?> href="./<?php echo ($v['id']); ?>"<?php endif; ?> target="_blank">
-									<img class="screenshot thumb" src="/public/home/images/lazyload.png" data-original="<?php echo ($v['avatar']); ?>"/>
-									<p class="user">
-										<img class="avatar thumb" src="/public/home/images/lazyload.png" data-original="<?php echo ($v['avatar']); ?>"/><span class="username"><?php echo ($v['user_nicename']); ?></span>
-									</p>
-								<div class="comment">
-									<div class="comment-inner">
-										<?php if($v['title']): echo ($v['title']); ?>
-										<?php else: ?>
-											此处应该有互动<?php endif; ?>
-									</div>
-								</div>
-							</a>
-							</li><?php endforeach; endif; else: echo "" ;endif; ?>
-						</ul>
-					</div>
-				</div>
-				</div>
-					<?php echo ($page); ?>
-			</div>
-
+<link type="text/css" rel="stylesheet" href="/public/home/css/common.css"/>
+<link type="text/css" rel="stylesheet" href="/public/home/css/Personal.css"/>
+<link type="text/css" rel="stylesheet" href="/public/home/css/font-awesome.min.css"/>
+<div class="headers">
+  <div class="container" style="padding-top:20px">
+    <div class="hersleft">
+			<a href="index.php?m=Personal&a=photo" style="display:inline-block;height:88px">
+				<img src="<?php echo ($info['avatar']); ?>" alt="" class="herszhezhao">
+				<i class="herszhezhao">
+				</i>
+			</a>
 		</div>
-	</div>
+		<div class="hersright">
+			<div style="display:black" id="datas">
+				<div>
+					<span><?php echo ($info['user_nicename']); ?></span>
+					<i class="dianji" id="dianji"></i>
+				</div>
+				<p title="<?php echo ($info['user_login']); ?>">个人账号：<?php echo ($info['user_login']); ?></p>
+			</div>
+			<div style="display:none" id="modify">
+				<input id="name" placeholder="请输入新昵称">
+				<p>
+					<span class="hersbaocun" >保存</span>
+					<span class="hersquxiao">取消</span>
+				</p>
+			</div>
+		</div>
+  </div>
+</div>
+<div class="container">
+  <div class="Firstfloor">
+		<div class="Leftlayout">
+			<ul id="accordion" class="accordion">
+	    <li>
+	      <a class="homepage"  href="index.php?m=Personal&a=index"><!-- <i class="fa fa-paint-brush"></i> -->我的首页
+		  </a>
+		</li>
+		<li <?php if($personal == 'Set'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
+			<div class="link" >账号设置<i class="fa fa-chevron-down"></i></div>
+			<ul <?php if($personal == 'Set'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
+				<li><a href="index.php?m=Personal&a=modify">基本资料</a></li>
+				<li><a href="index.php?m=Personal&a=photo">修改头像</a></li>
+				<li><a href="index.php?m=Personal&a=updatepass">修改密码</a></li>
+			</ul>
+		</li>
+		<li <?php if($personal == 'follow'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
+			<div class="link">我的社交<i class="fa fa-chevron-down"></i></div>
+			<ul <?php if($personal == 'follow'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
+				<li><a href="index.php?m=Personal&a=follow">我的关注</a></li>
+				<li><a href="index.php?m=Personal&a=fans">我的粉丝</a></li>
+				<li><a href="index.php?m=Personal&a=namelist">我的黑名单</a></li>
+				<li><a href="index.php?m=Personal&a=admin">我的管理员</a></li>
+				<li><a href="index.php?m=Personal&a=live">我的直播</a></li>
+			</ul>
+		</li>
+		<li <?php if($personal == 'card'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
+			<div class="link">我的认证<i class="fa fa-chevron-down"></i></div>
+			<ul <?php if($personal == 'card'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
+				<li><a href="index.php?m=Personal&a=card">我要认证</a></li>
+				<li><a href="index.php?m=Personal&a=exchange">提现中心</a></li>
+			</ul>
+		</li>
+	</ul>
+		</div>
+		<div class="rightlayout">
+			<div class="jiben">
+				<h3>基本资料</h3>
+				<div id="fpost"  method="post">
+					<div>
+						<label class="label">昵称：</label>
+            <div>
+                <input class="jiebankuang" type="text" name="nickName" id="nickName" placeholder="用户昵称" value="<?php echo ($info['user_nicename']); ?>">
+             </div>
+					</div>
+					<div>
+            <label class="label">性别：</label>
+            <div class="ctr">
+                <label class="radio">
+                  <input type="radio" class="xingbie" name="gender" value="1" <?php if($info['sex'] == "1") echo "checked=checked;"?>>
+                    男
+                </label>
+                <label class="radio">
+                  <input type="radio" class="xingbie" name="gender" value="2" <?php if($info['sex'] == "2") echo "checked=checked;"?>>
+                    女
+                </label>
+							
+            </div>
+					</div>
+					<div class="form-ctr">
+						<label class="label">签名：</label>
+						<input class="jiebankuangd" type="text" id="signature" name="signature" placeholder="签名" value="<?php echo ($info['signature']); ?>">
+					</div>
+					<div class="form-ctr">
+					<label class="label">生日：</label>
+					<input type="text" onkeypress="javascript:return false" onfocus=" this.style.imeMode='disabled' " name="birthday" id="birthday" class="js-date date jiebankuangd" value="<?php echo ($info['birthday']); ?>"  style="ime-mode: disabled" autocomplete="off">
+					</div>	
+					<div class="form-ctr UC-mt">
+            <div class="ctr">
+                <a class="baocunj" onclick="Personal.baocunj()">保存</a>
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
 	<div id="doc-ft">
 		<div class="container">
 			<p class="footer">
@@ -224,39 +281,88 @@
 		<script type="text/javascript" src="/public/home/js/layer.js"></script> 
 
 
-	<!--
-下线时将下面div元素的style改为"display:none;"
-上线时将下面div元素的style改为"display:block;"
-图片尺寸100X100
--->
-	<div id="right-fixed-position" class="right-fixed-position" style="display:none;" >
-		<a href="#" class="close"></a>
-		<a href="#" class="link" target="_blank"><img src="#"/></a>
-	</div>
-</div>
-<script type="text/javascript" src="/public/home/js/jquery.SuperSlide.2.1.1.js"></script>  
-<script>
-(function(){
-	/* 控制左右按钮显示 */
-	jQuery(".fullSlide").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.5) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
-
-	/* 调用SuperSlide */
-	jQuery(".fullSlide").slide({ titCell:".hd ul", mainCell:".bd ul", effect:"fold",  autoPlay:true, autoPage:true, trigger:"click",
-		startFun:function(i){
-			var curLi = jQuery(".fullSlide .bd li").eq(i); /* 当前大图的li */
-			if( !!curLi.attr("_src") ){
-				curLi.css("background-image",curLi.attr("_src")).removeAttr("_src") /* 将_src地址赋予li背景，然后删除_src */
-			}
-		}
-	});	
-})()
+<script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "/",
+    JS_ROOT: "public/js/",
+    TOKEN: ""
+};
+$(function()
+{
+	  /* 时间控件 */
+     $("input.js-date").datePicker();
+}
+)
 </script>
+<script src="/public/js/jquery.js"></script>
 <script>
 $(function(){
-	//图片延迟加载
-	$("img.thumb").lazyload({effect: "fadeIn"});		
-})
-</script>
-
+  //打开上传视频窗口
+  $('.dianji').click(function()
+	{
+		$("#datas").css('display','none');
+		$("#modify").css('display','block');
+  });  
+	$('.hersquxiao').click(function()
+	{
+		$("#modify").css('display','none');
+		$("#datas").css('display','block');
+  });
+  $('.hersbaocun').click(function()
+	{
+	  var name=$("#name").val();
+	  if(name!=""&&name!="请输入新昵称")
+		{ 
+			if(name.length>8)
+			{
+				layer.alert('昵称最多为八位', 
+				{
+					skin: 'layui-layer-molv' //样式类名
+					,closeBtn: 0,
+					shift: 5,
+					icon: 2,
+				}, function(){
+				layer.closeAll();
+				});
+			}
+			else
+			{
+				 $.getJSON("/index.php/Personal/edit_name/name/"+name+"/", {},
+        function(data)
+				{
+					if(data["state"]==0)
+					{
+					 	layer.alert('修改完成', 
+						{
+							skin: 'layui-layer-molv' //样式类名
+							,closeBtn: 0,
+							shift: 5,
+							icon: 1
+						}, function(){
+							window.location.href="";
+						});
+					}
+				});
+			}
+    }
+	  else
+	  {
+			layer.alert('昵称不能为空', 
+			{
+				skin: 'layui-layer-molv' //样式类名
+				,closeBtn: 0,
+				shift: 5,
+				icon: 2,
+			}, function(){
+			 layer.closeAll();
+			});
+	  }      
+  });
+	})
+</script>  
+<script src="/public/js/wind.js"></script>	
+<script type="text/javascript" src="/public/js/datePicker/datePicker.js"></script>
+<script type="text/javascript" src="/public/home/js/Personal.js"></script>  
 </body>
 </html>

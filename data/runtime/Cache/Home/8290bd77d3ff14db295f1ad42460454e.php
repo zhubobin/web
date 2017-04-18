@@ -64,7 +64,9 @@
 		<script type="text/javascript" src="/public/home/hxChat/js/webim.js"></script>
 
 		<!-- 环信私信功能end -->
-<title><?php echo ($site_name); ?></title>
+<title>管理员管理</title>
+<link type="text/css" rel="stylesheet" href="/public/home/css/common.css"/>
+<link href="/public/js/artDialog/skins/default.css" rel="stylesheet" />
 </head>
 <body style="background-color:#f3f3f3">
 	<div id="doc-hd" class="header double">
@@ -157,11 +159,7 @@
 <div class="headers">
   <div class="container" style="padding-top:20px">
     <div class="hersleft">
-<<<<<<< HEAD
-			<a href="web/index.php?m=Personal&a=photo" style="display:inline-block;height:88px">
-=======
 			<a href="index.php?m=Personal&a=photo" style="display:inline-block;height:88px">
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 				<img src="<?php echo ($info['avatar']); ?>" alt="" class="herszhezhao">
 				<i class="herszhezhao">
 				</i>
@@ -225,44 +223,40 @@
 				<div class="shouyez">
 					<h3 class="personal_h3">
 						<i class="h3_one"></i>
-						我的账户资产
+						提现中心
+						<span>
+							<?php echo ($getConfigName['name_votes']); ?>:<?php echo ($rs['votes']); ?>
+						 <a class="icon"></a>
+						</span>
+						<a class="buy-coins" href="index.php?m=Payment&a=index">充值</a>
+						<div class="linexi"></div>
 					</h3>
-					<div>
-						<ul>
-							<li style="border-left:0 none" class="one">
-								<i></i>
-								<div>
-									<span><?php echo ($getConfigName['name_coin']); ?></span>
-									<?php if($info['coin'] == ''): ?><span>0</span>
-									<?php else: ?>
-											<span><?php echo ($info['coin']); ?></span><?php endif; ?>
-									<a href="./index.php?m=Payment&a=index">充值</a>
-								</div>
-							</li>
-							<li class="two">
-								<i></i>
-								<div>
-									<span><a target="_blank">赠送礼物</a>/<a target="_blank">收到礼物</a></span>
-									<span>
-										<b target="_blank" title="0个"><?php echo ($getgif['tsc']); ?></b>个/
-										<b target="_blank"title="0个"><?php echo ($getgif['tsd']); ?></b>个
-									</span>
-								</div>
-							</li>
-							<li class="three">
-								<a><i></i></a>
-								<div>
-									<span><a target="_blank">我的等级</a>/<a target="_blank">累计经验</a></span>
-									<span>
-										<b target="_blank"><?php echo ($level); ?></b>级/
-										<b target="_blank"><?php echo ($experience); ?></b>点
-									</span>
-								</div>
-							</li>
-						</ul>
+				</div>
+			</div>
+			<div class="schedule">
+         <div class="exchange">
+				   <i class="dotico dotico-l"></i>
+				   <i class="dotico dotico-r"></i>
+					 <h4><?php echo ($getConfigName['name_votes']); ?>兑换RMB</h4>
+					 <p class="item">
+						<label>今日可提现金额</label>
+						<a id="coin_z" name="coin_z" class="coin_z" value="<?php echo ($rs['todaycash']); ?>"><?php echo ($rs['todaycash']); ?></a>
+					 </p>
+					 <p class="btn">
+						<button type="submit" onclick="Personal.exchange()">
+							<span>提现</span>
+						</button>
+					 </p>
+				</div>
+        <div class="exchange-list">
+					<div class="tip">
+						<span>
+							<strong>提示</strong>
+							可提现金额：
+							<em><?php echo ($rs['total']); ?></em>
+						<span>
 					</div>
 				</div>
-				<div class="shouyey"></div>
 			</div>
 		</div>
   </div>
@@ -372,6 +366,6 @@ $(function(){
 </script>  
 <script src="/public/js/wind.js"></script>	
 <script type="text/javascript" src="/public/js/datePicker/datePicker.js"></script>
-<script type="text/javascript" src="/public/home/js/Personal.js"></script>  
+<script type="text/javascript" src="/public/home/js/Personal.js"></script> 
 </body>
 </html>

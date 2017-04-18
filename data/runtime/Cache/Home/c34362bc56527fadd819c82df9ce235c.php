@@ -65,6 +65,7 @@
 
 		<!-- 环信私信功能end -->
 <title><?php echo ($site_name); ?></title>
+<link type="text/css" rel="stylesheet" href="/public/home/css/font-awesome.min.css"/>
 </head>
 <body style="background-color:#f3f3f3">
 	<div id="doc-hd" class="header double">
@@ -220,53 +221,169 @@
 		</li>
 	</ul>
 		</div>
-		<div class="rightlayout">
-			<div class="clearfix">
-				<div class="shouyez">
-					<h3 class="personal_h3">
-						<i class="h3_one"></i>
-						我的账户资产
-					</h3>
-					<div>
-						<ul>
-							<li style="border-left:0 none" class="one">
-								<i></i>
-								<div>
-									<span><?php echo ($getConfigName['name_coin']); ?></span>
-									<?php if($info['coin'] == ''): ?><span>0</span>
-									<?php else: ?>
-											<span><?php echo ($info['coin']); ?></span><?php endif; ?>
-									<a href="./index.php?m=Payment&a=index">充值</a>
-								</div>
-							</li>
-							<li class="two">
-								<i></i>
-								<div>
-									<span><a target="_blank">赠送礼物</a>/<a target="_blank">收到礼物</a></span>
-									<span>
-										<b target="_blank" title="0个"><?php echo ($getgif['tsc']); ?></b>个/
-										<b target="_blank"title="0个"><?php echo ($getgif['tsd']); ?></b>个
-									</span>
-								</div>
-							</li>
-							<li class="three">
-								<a><i></i></a>
-								<div>
-									<span><a target="_blank">我的等级</a>/<a target="_blank">累计经验</a></span>
-									<span>
-										<b target="_blank"><?php echo ($level); ?></b>级/
-										<b target="_blank"><?php echo ($experience); ?></b>点
-									</span>
-								</div>
-							</li>
-						</ul>
+	<div class="rightlayout">
+		<?php if($auth == '1' or $auth == '0'): ?><p class="page_title"><?php if($auth == '0'): ?>认证审核中<?php else: ?>审核成功<?php endif; ?></p>
+				<div class="area_bd">
+					<div class="F_creBox">
+						<div class="F_crePro">
+						 <div <?php if($auth['status'] == '0'): ?>class="F_creProC1" <?php else: ?>class="F_creProC2"<?php endif; ?>></div>
+						 <div class="F_proD">
+							<span>1</span>
+							填写资料
+						 </div>
+						  <div class="F_proD one">
+							<span>2</span>
+							试播审核
+						 </div>
+						  <div class="F_proD two">
+							<span>3</span>
+							审核完成
+						 </div>
+						</div>
 					</div>
 				</div>
-				<div class="shouyey"></div>
+		<?php else: ?>
+			<div class="authtop">
+				<p>以下内容为必填项，为保证您的利益，请如实填写</p>
 			</div>
-		</div>
-  </div>
+			<p class="card_shibai"><?php if($auth['status'] == '2'): ?>认证失败，请填写真实信息重新认证<?php endif; ?></p>
+			<img src="public/rz/images/authstep1.png" class="box-top">
+			<div style="width:600px;margin:0 auto;margin-top:30px">
+				
+					<div class="content"> 
+					<div class="card_in">
+						<div>
+							<span class="span1">真实姓名</span>
+							<input type="text" id="real_name" placeholder="请填写您的真实姓名"/>
+						</div>
+						<div class="line"></div>
+						<div>
+							<span class="span1">手机号码</span>
+							<input type="text" id="mobile" placeholder="请填写您的手机号"/>
+						</div>
+						<div class="line"></div>
+						<div>
+							<span class="span1">银行卡号</span>
+							<input type="text" id="card_no" placeholder="请填写您的银行卡号"/>
+						</div>
+						<div class="line"></div>
+						<div class="pr">
+							<span class="span1">开户银行</span>
+							<select class="card_se" id="bank_name">
+								<option>请选择开户银行</option>
+								<option>中国银行</option>
+								<option>北京银行</option>
+								<option>建设银行</option>
+								<option>中国工商银行</option>
+								<option>中国农业银行</option>
+								<option>中信银行</option>
+								<option>民生银行</option>
+								<option>中国交通银行</option>
+								<option>中国邮政储蓄银行</option>
+								<option>招商银行</option>
+								<option>中国光大银行</option>
+								<option>兴业银行</option>
+								<option>其他</option>
+							</select>
+							<img src="public/rz/images/authleft.jpg" class="jiantou">
+						</div>
+						<div class="line"></div>
+						<div class="pr">
+							<span class="span1">开户地<span style="color: #fff;">我</span></span>
+							<select class="card_se" id="p">
+								<option>开卡所在省</option>
+							</select>
+							<img src="public/rz/images/authleft.jpg" class="jiantou">
+						</div>
+						<div class="line"></div>
+						<div class="pr">
+							<span class="span1" style="color: #fff;">开户银行</span>
+							<select class="card_se" id="c">
+								<option>开卡所在市</option>
+							</select>
+							<img src="public/rz/images/authleft.jpg" class="jiantou">
+						</div>
+						<div class="line"></div>
+						<div>
+							<span class="span1">支行名称</span>
+							<input type="text" id="sub_branch" placeholder="请填写您的支行名称"/>
+						</div>
+						</div>
+						</div>
+					</div>
+					<div class="next-btn">下一步</div>
+						<div class="content2" style="width:600px;margin:0 auto;margin-top:30px">
+						 <div class="card_in">
+							<div class="pr">
+								<span class="span1">证件类型</span>
+								<select class="card_se" id="cer_type">
+									<option>请选择您的证件类型</option>
+									<option>身份证</option>
+									<option>港澳居民来往内地通行证</option>
+									<option>香港、澳门身份证</option>
+									<option>台胞证</option>
+									<option>护照</option>
+								</select>
+								<img src="public/rz/images/authleft.jpg" class="jiantou">
+							</div>
+							<div class="line"></div>
+							<div>
+								<span class="span1">证件号<span style="color: #fff;">是否</span></span>
+								<input type="text" id="cer_no" style="margin-left:0.5%" placeholder="请填写您的证件号码"/><br>
+							</div>
+							<div class="line"></div>
+    <!--<span class="span1" style="font-size:0.7em">海外及港澳台用户请填写和上传护照/港澳身份证 /台胞证</span>-->
+							<div id="resident">
+								<img src="public/rz/images/auth_face.jpg" class="fl img-sfz" data-index="ipt-file1" onclick="file_click($(this))">
+								<img src="public/rz/images/auth_back.jpg" class="fl img-sfz" data-index="ipt-file2" onclick="file_click($(this))">
+								<img src="public/rz/images/auth_handle.jpg" class="fl img-sfz" data-index="ipt-file3" onclick="file_click($(this))">
+								<div class="cl"></div>
+								<div class="shad shadd" data-select="ipt-file1">
+										<div class="title-upload">正在上传中...</div>
+										<div id="progress1">
+											<div class="progress ipt-file1"></div>
+										</div>
+								</div>
+								<div class="shad2 shadd" data-select="ipt-file2">
+									<div class="title-upload">正在上传中...</div>
+									<div id="progress2">
+										<div class="progress ipt-file2"></div>
+									</div>
+								</div>
+								<div class="shad3 shadd" data-select="ipt-file3">
+									<div class="title-upload">正在上传中...</div>
+									<div id="progress3">
+										<div class="progress ipt-file3"></div>
+									</div>
+								</div>
+								<div class="box-upload1 box-upload" data-index="ipt-file1" onclick="file_click($(this))">
+									<img src="" class="img-upload" >
+								</div>
+								<div class="box-upload2 box-upload" data-index="ipt-file2" onclick="file_click($(this))">
+									<img src="" class="img-upload">
+								</div>
+								<div class="box-upload3 box-upload" data-index="ipt-file3" onclick="file_click($(this))">
+									<img src="" class="img-upload">
+								</div>
+								<input value="" type="hidden" name="front_view" class="sf1">
+								<input value="" type="hidden" name="bank_view" class="sf2">
+								<input value="" type="hidden" name="handset_view" class="sf3">
+							</div>
+							<div id="upload"></div>
+							<img src="public/rz/images/id_handle2.jpg" style="width: 90%;margin: 6% 5% 0 3%;">
+							<br>
+						</div>
+						</div>
+						<div class="aply" style="display: none;">提交认证</div>
+				</div><?php endif; ?>
+	</div>
+ </div>
 </div>
+<script type="text/javascript" language="javascript">
+ var _show = {
+			"uid": "<?php echo $uid; ?>",
+		}
+</script>
 	<div id="doc-ft">
 		<div class="container">
 			<p class="footer">
@@ -372,6 +489,8 @@ $(function(){
 </script>  
 <script src="/public/js/wind.js"></script>	
 <script type="text/javascript" src="/public/js/datePicker/datePicker.js"></script>
-<script type="text/javascript" src="/public/home/js/Personal.js"></script>  
+<script type="text/javascript" src="/public/home/js/Personal.js"></script> 
+<script type="text/javascript" src="/public/home/js/card.js"></script>
+<script type="text/javascript" src="/public/rz/js/ajaxfileupload.js"></script>
 </body>
 </html>
