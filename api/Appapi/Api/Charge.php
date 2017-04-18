@@ -40,7 +40,7 @@ class Api_Charge extends Api_Common {
 	 * @return string msg 提示信息
 	 */
 	public function getWxOrder() {
-		$rs = array('code' => 0, 'msg' => '', 'info' => array());
+		$rs = array('code' => 0, 'msg' => '', 'info' => array());	
 		
 		$uid=$this->uid;
 		$changeid=$this->changeid;

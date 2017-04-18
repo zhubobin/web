@@ -15,20 +15,9 @@
 					<tr>
 					  <th>序号</th>
 						<th align="center">ID</th>
-<<<<<<< HEAD
 						<th>咘谷豆</th>
 						<th>谷子</th>
 						<th>发布时间</th>
-=======
-						<th>名称</th>
-						<th>钻石</th>
-						<th>价格</th>
-						<th>苹果支付价格</th>
-						<th>苹果项目ID</th>
-						<th>赠送钻石</th>
-						<th>发布时间</th>
-
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 						<th align="center">{:L('ACTIONS')}</th>
 					</tr>
 				</thead>
@@ -37,20 +26,9 @@
 					<tr>
 					  <td><input name="listorders[{$vo['id']}]" type="text" size="3" value="{$vo['orderno']}" class="input input-order"></td>
 						<td align="center">{$vo.id}</td>
-<<<<<<< HEAD
 						<td>{$vo['cuckoo']}</td>
 						<td>{$vo['guzi']}</td>
 						<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
-=======
-						<td>{$vo['name']}</td>
-						<td>{$vo['coin']}</td>
-						<td>{$vo['money']}</td>
-						<td>{$vo['money_ios']}</td>
-						<td>{$vo['product_id']}</td>
-						<td>{$vo['give']}</td>
-						<td>{$vo.addtime|date="Y-m-d H:i:s",###}</td>
-
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 						<td align="center">	
 							<a href="{:U('Chargerules/edit',array('id'=>$vo['id']))}" >编辑</a>
 							<a href="{:U('Chargerules/del',array('id'=>$vo['id']))}"  class="js-ajax-dialog-btn" data-msg="您确定要删除吗？">删除</a>

@@ -32,7 +32,24 @@ class Model_Login extends Model_Common {
 		$this->updateToken($info['id'],$token);
 		
 		$cache=array("token_".$info['id'],"userinfo_".$info['id']);
+		
+	
+		
 		$this->delcache($cache);
+        return $info;
+    }	
+	/* 会员登出 */   	
+    public function userLoginOut($uid,$token,$type) {
+		$info 	=	DI()->notorm->users->select('token')->where('id='.$uid)->fetchOne();
+		if($info['token']!=$token){
+			$info['msg'] 	=	'bad token';
+			return  $info['msg'];
+		}
+		
+		$info 	=	$this->updateToken($uid,$type);		
+		$cache 	=	array("token_".$uid,"userinfo_".$uid);		
+		$this->delcache($cache);
+		$info 	=	!empty($info)?'退出成功':'error';
         return $info;
     }	
 	
@@ -60,11 +77,18 @@ class Model_Login extends Model_Common {
 				->select('id')
 				->where('user_login=? and user_type="2"',$user_login) 
 				->fetchOne();
+		
 		if($isexist){
 			return 1006;
 		}
 
 		$rs=DI()->notorm->users->insert($data);		
+		
+		if($rs['id']){
+			DI()->notorm->users
+				->where('id=?',$rs['id'])
+				->update(array('memberid'=>10000+$rs['id']));
+		}
 		
 		$info['id']=$rs['id'];
 		$info['user_nicename']=$data['user_nicename'];
@@ -191,10 +215,14 @@ class Model_Login extends Model_Common {
 	/* 更新token 登陆信息 */
     public function updateToken($uid,$token) {
 		$expiretime=time()+60*60*24*300;
+		if($token=='userLoginOut'){//用户退出
+			$expiretime=time()-1;
+		}
 		
         DI()->notorm->users
 			->where('id=?',$uid)
             ->update(array("token"=>$token, "expiretime"=>$expiretime ,'last_login_time' => date("Y-m-d H:i:s"), "last_login_ip"=>$_SERVER['REMOTE_ADDR'] ));
+		
 		return 1;
     }	
 

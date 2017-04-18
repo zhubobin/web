@@ -11,18 +11,14 @@ class Api_Common extends PhalApi_Api {
 		$redis = new Redis();
 		$redis -> pconnect($REDIS_HOST,6379);
 		$redis -> auth($REDIS_AUTH);
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		return $redis;
 	}
 	/* 设置缓存 */
 	public function setcache($key,$info){
 		$config=$this->getConfigPri();
 		if($config['cache_switch']!=1){
-			return 1;
+			//return 1;
 		}
 		DI()->redis->set($key,json_encode($info));
 		DI()->redis->setTimeout($key, $config['cache_time']); 
@@ -105,10 +101,6 @@ class Api_Common extends PhalApi_Api {
 	/* 用户基本信息 */
 	public function getUserInfo($uid) {
 		$info=$this->getCache("userinfo_".$uid);
-<<<<<<< HEAD
-=======
-		
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		if(!$info){
 			$domain = new Domain_Common();
 			$info = $domain->getUserInfo($uid);				
@@ -158,6 +150,7 @@ class Api_Common extends PhalApi_Api {
 		}
 		return $levelid;
 	}	
+	
 	/* 数字格式化 */
 	public function NumberFormat($num){
 		if($num<10000){
@@ -204,11 +197,14 @@ class Api_Common extends PhalApi_Api {
 		$checkstr=urldecode($checkstr);
 		$checkstr=htmlspecialchars($checkstr);
 		$checkstr=$this->filterEmoji($checkstr);
+		
 		if( strstr($checkstr,'null') || (!$checkstr && $checkstr!=0 ) ){
+			
 			$str='';
 		}else{
 			$str=$checkstr;
 		}
+		
 		return $str;	
 	}
 	
@@ -246,7 +242,6 @@ class Api_Common extends PhalApi_Api {
 		$domain = new Domain_Common();
 		$rs = $domain->isAuth($uid);
 		return $rs;
-		
 	}
 	/* 过滤关键词 */
 	public function filterField($field){

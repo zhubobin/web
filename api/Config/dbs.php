@@ -11,15 +11,10 @@ return array(
         'db_appapi' => array(                         //服务器标记
             'host'      => 'localhost',             //数据库域名
             'name'      => 'phonelive',               //数据库名字
-<<<<<<< HEAD
-            'user'      => 'phonelive',                  //数据库用户名
-            'password'  => 'tieweishivps',	                    //数据库密码
-=======
             // 'user'      => 'phonelive',                  //数据库用户名
             // 'password'  => 'tieweishivps',                      //数据库密码
             'user'      => 'root',                  //数据库用户名
             'password'  => 'qq123',	                    //数据库密码
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
             'port'      => '3306',                  //数据库端口
             'charset'   => 'UTF8',                  //数据库字符集
         ),

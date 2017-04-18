@@ -182,7 +182,7 @@ class Api_Live extends Api_Common {
 			return $rs;
 		}
 		$checkToken=$this->checkToken($uid,$token);
-		if($checkToken==700){
+		if($checkToken==7000){
 			$rs['code'] = $checkToken;
 			$rs['msg'] = 'Token错误或已过期，请重新登录';
 			return $rs;

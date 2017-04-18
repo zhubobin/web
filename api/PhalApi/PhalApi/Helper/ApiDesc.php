@@ -9,10 +9,10 @@
  */
 
 class PhalApi_Helper_ApiDesc {
-
+     
     public function render() {
         $service = DI()->request->get('service', 'Default.Index');
-
+        var_dump($service);
         $rules = array();
         $returns = array();
         $description = '';

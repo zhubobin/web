@@ -70,10 +70,6 @@ function Qiniu_PutFile($upToken, $key, $localFile, $putExtra) // => ($putRet, $e
 	}
 
 	$fields = array('token' => $upToken, 'file' => createFile($localFile, $putExtra->MimeType));
-<<<<<<< HEAD
-=======
-
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 	if ($key === null) {
 		$fname = '?';
 	} else {
@@ -95,10 +91,6 @@ function Qiniu_PutFile($upToken, $key, $localFile, $putExtra) // => ($putRet, $e
 	}
 
 	$client = new Qiniu_HttpClient;
-<<<<<<< HEAD
-=======
-	
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 	return Qiniu_Client_CallWithForm($client, $QINIU_UP_HOST, $fields, 'multipart/form-data');
 }
 

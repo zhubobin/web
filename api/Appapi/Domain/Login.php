@@ -10,6 +10,15 @@ class Domain_Login {
 
         return $rs;
     }
+	
+	public function userLoginOut($uid,$token,$type) {
+        $rs = array();
+
+        $model = new Model_Login();
+        $rs = $model->userLoginOut($uid,$token,$type);
+		
+        return $rs;
+    }
 
     public function userReg($user_login,$user_pass) {
         $rs = array();

@@ -83,11 +83,7 @@ class PhalApi_DB_NotORM /** implements PhalApi_DB */ {
     /**
      * @var boolean 是否开启调试模式，调试模式下会输出全部执行的SQL语句和对应消耗的时间
      */
-<<<<<<< HEAD
     protected $debug = FALSE;
-=======
-    protected $debug = TRUE;
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 
     /**
      * @var boolean 是否保持原来数据库结果集中以主键为KEY的返回方式（默认不使用）

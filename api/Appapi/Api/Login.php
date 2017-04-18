@@ -34,6 +34,10 @@ class Api_Login extends Api_Common {
 			'getForgetCode' => array(
 				'mobile' => array('name' => 'mobile', 'type' => 'string', 'min' => 1, 'require' => true,  'desc' => '手机号'),
 			),
+			'userLoginOut' => array(
+				'uid' => array('name' => 'uid', 'type' => 'int', 'min' => 1, 'require' => true,  'desc' => '用户ID'),	
+				'token' => array('name' => 'token', 'type' => 'string','require' => true,  'desc' => '用户token'),		
+			),
         );
 	}
 	
@@ -79,6 +83,24 @@ class Api_Login extends Api_Common {
 				
 		
         return $rs;
+    }
+	 /**
+     *  需要密码   
+     * @return int code 操作码，0表示成功
+     * @return array data 返回数据信息
+     * @return data[code] 0表示退出成
+     * @return data[msg]  提示信息 
+	 */
+	
+	public function userLoginOut() {
+		
+		$rs 		=	array('code' => 0, 'msg' => '');
+		$uid 		=	$this->uid;
+		$token 		=	$this->token;
+		$type 		=	'userLoginOut';
+		$domain = new Domain_Login();
+		$rs['msg']	=	$domain->userLoginOut($uid,$token,$type);
+		return $rs;
     }		
    /**
      * 会员注册

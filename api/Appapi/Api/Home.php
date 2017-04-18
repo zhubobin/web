@@ -12,6 +12,10 @@ class Api_Home extends Api_Common {
 				'uid' => array('name' => 'uid', 'type' => 'int','min'=>1,'require' => true, 'desc' => '用户ID'),
 				'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
 			),
+				
+			'getLiving' => array(
+					'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
+			),
 			
 			'getNew' => array(
                 'lng' => array('name' => 'lng', 'type' => 'string', 'desc' => '经度值'),
@@ -20,20 +24,12 @@ class Api_Home extends Api_Common {
             ),
 			
 			'search' => array(
-<<<<<<< HEAD
 				'uid' => array('name' => 'uid', 'type' => 'int', 'require' => true, 'min'=>1 ,'desc' => '用户ID'),
 				'key' => array('name' => 'key', 'type' => 'string', 'default'=>'' ,'desc' => '用户ID'),
 				'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
 			),
-=======
-                'uid' => array('name' => 'uid', 'type' => 'int', 'require' => true, 'min'=>1 ,'desc' => '用户ID'),
-                'key' => array('name' => 'key', 'type' => 'string', 'default'=>'' ,'desc' => '用户ID'),
-                'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
-            ),
-            'getCityList' => array(    
+			'getCityList' => array(    
 			),
-
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		);
 	}
 	
@@ -53,23 +49,20 @@ class Api_Home extends Api_Common {
         $rs['info'][0] = $info;
 
         return $rs;
-    }	
-
-<<<<<<< HEAD
-=======
-    public function getCityList() {
-        $rs         =   array('code' => 0, 'msg' => '', 'info' => array()); 
-        $domain     =   new Domain_Home();
-        $this->city =   !empty($this->city)?$this->city:1;
-        $info       =   $domain->getCityList($this->city);
-        $rs['msg']  =   empty($info)?'获取列表失败':'获取列表ok';
-        $rs['info'][0] = $info;
-        $rs['code'] = 1;
+    }
     
-        return $rs;
+    
+	
+	public function getCityList() {
+		$rs         =   array('code' => 0, 'msg' => '', 'info' => array()); 
+		$domain     =   new Domain_Home();		
+		$info       =   $domain->getCityList();
+		$rs['msg']  =   empty($info)?'获取列表失败':'获取列表ok';
+		$rs['info'] = $info;
+		$rs['code'] = 0;
+		return $rs;
     }   
 
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
     /**
      * 登录方式开关信息
      * @desc 用于获取登录方式开关信息
@@ -117,6 +110,7 @@ class Api_Home extends Api_Common {
         $rs = array('code' => 0, 'msg' => '', 'info' => array());
 
         $domain = new Domain_Home();
+        echo $domain;exit;
 		$key1='getSlide';
 		$slide=$this->getcache($key1);
 		if(!$slide){
@@ -153,17 +147,47 @@ class Api_Home extends Api_Common {
      * @return string info[].thumb 直播封面
      * @return string msg 提示信息
      */
-    public function getFollow() {
+    public function getLiving() {
         $rs = array('code' => 0, 'msg' => '', 'info' => array());
 
         $domain = new Domain_Home();
-        $info = $domain->getFollow($this->uid,$this->p);
+        $info = $domain->getLiving($this->p);
 
 
         $rs['info'] = $info;
 
         return $rs;
     }
+    
+    /**
+     * 获取直播列表
+     * @desc 用于获取直播列表
+     * @return int code 操作码，0表示成功
+     * @return array info 直播列表
+     * @return string info[].uid 主播id
+     * @return string info[].avatar 主播头像
+     * @return string info[].avatar_thumb 头像缩略图
+     * @return string info[].user_nicename 直播昵称
+     * @return string info[].title 直播标题
+     * @return string info[].city 主播位置
+     * @return string info[].stream 流名
+     * @return string info[].pull 播流地址
+     * @return string info[].nums 人数
+     * @return string info[].thumb 直播封面
+     * @return string msg 提示信息
+     */
+    public function getFollow() {
+    	$rs = array('code' => 0, 'msg' => '', 'info' => array());
+    
+    	$domain = new Domain_Home();
+    	$info = $domain->getFollow($this->uid,$this->p);
+    
+    
+    	$rs['info'] = $info;
+    
+    	return $rs;
+    }
+    
 
     /**
      * 获取最新主播

@@ -17,8 +17,10 @@ function setParameter($specialParameter){
    $Timestamp = $var . 'Z';
    $signature_nonce = '';
    for($i =0 ; $i < 14; $i++){
-		 $signature_nonce .= mt_rand(0,9);
-	 }
+	 	
+   		$signature_nonce .= mt_rand(0,9);
+	
+   }
    $publicParameter = array(
       'Format'         => 'JSON',
       'Version'        => '2014-11-11',
