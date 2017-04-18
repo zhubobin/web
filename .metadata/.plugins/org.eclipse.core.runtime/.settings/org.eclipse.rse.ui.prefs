@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+org.eclipse.rse.internal.files.ui.view.SystemViewRemoteFileAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.file.classification;org.eclipse.rse.ui.file.lastmodified;org.eclipse.rse.ui.file.size;org.eclipse.rse.ui.file.canonicalpath;org.eclipse.rse.ui.file.extension;org.eclipse.rse.ui.file.permissions;org.eclipse.rse.ui.file.owner;org.eclipse.rse.ui.file.group
+org.eclipse.rse.internal.ui.view.SystemViewConnectionAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.profile;org.eclipse.rse.ui.systemType;org.eclipse.rse.ui.connected;org.eclipse.rse.ui.hostname;org.eclipse.rse.ui.defaultuserid;org.eclipse.rse.ui.description
+org.eclipse.rse.internal.ui.view.SystemViewFilterReferenceAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.filterParentPool;org.eclipse.rse.ui.filterParent;org.eclipse.rse.ui.filterstringsCount;org.eclipse.rse.ui.filterConnectionPrivate
+org.eclipse.rse.internal.ui.view.SystemViewMessageAdapter\:org.eclipse.rse.ui.view.SystemTableView=null
+org.eclipse.rse.internal.ui.view.SystemViewSubSystemAdapter\:org.eclipse.rse.ui.view.SystemTableView=org.eclipse.rse.ui.userid;org.eclipse.rse.ui.port;org.eclipse.rse.ui.connected;org.eclipse.rse.ui.vrm
+org.eclipse.rse.preferences.order.connections=PC-20170228GVPC.192.168.1.109
+ssh.files.filterStringDialog=/var/www/html/web;/

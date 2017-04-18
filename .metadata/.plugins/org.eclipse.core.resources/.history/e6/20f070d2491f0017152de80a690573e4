@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="telephone=no" name="format-detection" />
+		<title>我的等级</title>
+		<link href='__PUBLIC__/appapi/css/level.css' rel="stylesheet" type="text/css" >
+	</head>
+<body >
+
+	<div class="main">
+		<div class="level">
+			<div class="level_val">
+				<ul>
+					<li>累计经验值：<span id="total">{$experience}</span></li>
+					<li>距离升级还差：<span id="next_diff">{$cha}</span></li>
+				</ul>
+			</div>
+
+			<div class="pie">
+		        <div class="pie_left"><div class="left"></div></div>
+		        <div class="pie_right"><div class="right"></div></div>
+		        <div class="mask">
+		         <div id="level">{$level['levelid']}</div>
+		         <div style="" id="mylevel">我的等级</div>
+		         <div class="clear"></div> 
+		        </div>
+		  </div>
+		</div>
+		<div class="text">
+			<h2>等级权益</h2>
+			<p>1. 不同等级图标不同，越高越尊贵</p>
+			<p>2. 你的身份一眼可见，尊贵显而易见</p>
+			<h2 style="margin-top:30px">如何升级</h2>
+			<p>1. 送礼物是升级最快的办法，送的越多升级越快！</p>
+		</div>
+	</div>
+</body>
+
+<script src="__PUBLIC__/js/jquery.js"></script>
+<script>
+$(document).ready(function() {
+  var percent = 0.30;
+	var pie_width = 134;
+	var doc_width = $(document).width();
+	if (doc_width < 360) {
+		pie_width = Math.ceil(doc_width * percent);
+		if (pie_width % 2 > 0) pie_width++;
+	}
+	$('.pie').css('width', pie_width+'px')
+			 .css('height', pie_width+'px')
+			 .css('background-size', pie_width+'px '+pie_width+'px')
+			 .css('top', (200-pie_width)/2+'px ');
+
+
+	$('.pie_left').css('width', pie_width+'px');
+	$('.pie_left').css('height', pie_width+'px');
+	$('.pie_right').css('width', pie_width+'px');
+	$('.pie_right').css('height', pie_width+'px');
+	$('.left').css('width', pie_width+'px');
+	$('.left').css('height', pie_width+'px');
+	$('.right').css('width', pie_width+'px');
+	$('.right').css('height', pie_width+'px');
+
+	$('.pie_right').css('clip', 'rect(0,auto,auto,'+(pie_width / 2)+'px)');
+	$('.right').css('clip', 'rect(0,auto,auto,'+(pie_width / 2)+'px)');
+
+	$('.pie_left').css('clip', 'rect(0,'+(pie_width / 2)+'px,auto,0)');
+	$('.left').css('clip', 'rect(0,'+(pie_width / 2)+'px,auto,0)');
+
+	$('.mask').css('width', (pie_width - 14)+'px');
+	$('.mask').css('height', (pie_width - 14)+'px');
+	$('.mask').css('line-height', (pie_width - 14)+'px');
+
+
+    var num = Math.round({$rate} * 3.6);
+
+    //if (num == 0) num = 360;
+    if (num <= 180) {
+        $(this).find('.right').css('transform', 'rotate(' + num + 'deg)');
+    } else {
+        $(this).find('.right').css('transform', 'rotate(180deg)');
+        $(this).find('.left').css('transform', 'rotate(' + (num - 180) + 'deg)');
+    }
+})
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>等级权限</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
+</head>
+<script type="text/javascript">
+	function calcuroot_size(blockWidth){
+		var root_size=100*(blockWidth/750);
+		$("html").css({"font-size":root_size+"px"});
+	}
+	calcuroot_size(window.innerWidth);
+</script>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	img{
+		vertical-align: middle;
+	}
+	li,ul{
+		list-style-type: none;
+	}
+	body{
+		font-family: '微软雅黑';
+	}
+	.page{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.page:before{
+		display: table;
+		content: '';
+	}
+	.headPic{
+		width: 4.8rem;
+		height: 3.01rem;
+		margin:0.78rem auto 0;
+		position: relative;
+	}
+	.headPic:before{
+		content: '';
+		display: table;
+	}
+	.headPic>img{
+		width: 2.3rem;
+		display: block;
+		margin:0.29rem auto 0;
+	}
+	.headHover{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: url(./img/3.png);
+		background-size: 100% 100%;
+		z-index: 10;
+		top:0;
+	}
+	.level{
+		position: absolute;
+		width: 2.61rem;
+		height:0.4rem;
+		top:2.19rem;
+		left:1.08rem;
+		text-align: center;
+		font-size: 0.28rem;
+		color:#fff;
+	}
+	.levelDesc{
+		width: 4.77rem;
+		margin:0.63rem auto 0;
+		font-size: 0.2rem;
+		color:#B0B0B0;
+		text-align: center;
+	}
+	.alert{
+		color:#58BFBD;
+	}
+	.levelDetail{
+		width: 6.11rem;
+		margin:0.14rem auto 0;
+		overflow: hidden;
+	}
+	.levelDetail:before{
+		content: '';
+		display: table;
+	}
+	.currentLevel{
+		float:left;
+		font-size: 0.28rem;
+		margin-right: 0.12rem;
+	}
+	.levelLine{
+		width: 4.34rem;
+		height: 0.08rem;
+		border-radius:0.03rem;
+		background: #E9E9E9;
+		float: left;
+		margin-top: 0.14rem;
+		margin-bottom:0.36rem;
+	}
+	.getLev{
+		width: 50%;
+		height: 100%;
+		border-radius: 0.03rem;
+		background-color: #58BFBD;
+	}
+	.nextLevel{
+		font-size: 0.28rem;
+		margin-left: 0.12rem;
+		color:#B0B0B0;
+		float: left;
+	}
+	
+	
+	
+	.cup{
+	    width: 100%;
+		height: 0.1rem;
+		position: relative;
+		background-color: #F4F4F4;
+		}
+	.grade{
+		width: 4.77rem;
+		margin:0.30rem auto 0 auto;
+		font-size: 0.3rem;
+		color:#373737;
+		text-align: center;
+		}
+	.gradePic{
+		width: 6.42rem;
+		height: 4.26rem;
+		margin:0 auto;
+		margin-top:0.37rem;
+		position: relative;
+		}
+	.gradePic:before{
+		content: '';
+		display: table;
+		}
+	.gradePage{
+		float:left;
+	    width:1.26rem;
+		height:2.13rem;
+	}
+	.gradeCsc{
+	    width: 1.26rem;
+		display: block;
+		margin:0 auto;
+	}
+	.gradeAsc{
+		margin:0.09rem auto 0;
+		font-size: 0.28rem;
+		color:#373737;
+		text-align: center;
+	}
+	.gradeBsc{
+	    margin:0.07rem auto 0.23rem;
+		font-size: 0.20rem;
+		color:#B0B0B0;
+		text-align: center;
+	}
+	.gradePage#gradePageone{
+	    margin-left:1.32rem;
+	    margin-right:1.32rem;
+	}
+	.gradePage#gradePagetwo{
+		margin-left:1.32rem;
+		margin-right:1.32rem;
+	}
+	.gradeDsc{
+		    margin-top: 0.16rem;
+		    margin-bottom: 0.36rem;
+		    font-size: 0.24rem;
+		    color: #B0B0B0;
+		    text-align: center;
+	}
+	
+	
+	
+	.upPic{
+		width: 6.17rem;
+		height: 4.22rem;
+		margin:0.72rem auto 0;
+		position: relative;
+	}
+	.upPic{
+		content: '';
+		display: table;
+	}
+	.upPic>img{
+		width: 6.17rem;
+		display: block;
+		margin:0.72rem auto 0;
+	}
+	.gradeP{
+	    margin-top:0.76rem;
+		margin-bottom:0.7rem;
+		font-size: 0.24rem;
+		color:#373737;
+		text-align: center;
+	}
+	.swiper-container{
+		width: 100%;
+		height: 5.5rem;
+		position: relative;
+
+	}
+	.swiper-pagination {
+	    position: absolute;
+	    bottom: 0rem !important;
+	    text-align: center;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	    margin:0 0.25rem;
+    }
+    .swiper-pagination-bullet{
+	    width:0.15rem;
+    	height:0.15rem;
+    	display:inline-block;
+    	border-radius:100%;
+    	background:#000;
+    	opacity: .2;
+    }
+    .swiper-pagination-bullet-active{
+	    opacity: 1;
+    	background:#58BFBD;
+    }
+</style>
+
+	<div class="page">
+		<div class="headPic">
+			<img src="./img/1.png">
+			<div class="headHover">
+				<p class="level">Lv.18</p>
+			</div>
+		</div>
+		<p class="levelDesc">当前累计经验<span class="alert">18</span>,离升级还差<span class="alert">80</span></p>
+		<div class="levelDetail">
+			<div class="currentLevel alert">
+				Lv.18
+			</div>
+			<div class="levelLine">
+					<div class="getLev"></div>
+			</div>
+			<div class="nextLevel">Lv.19</div>
+		</div>
+	</div>
+	
+	<div class="cup"></div>
+	
+	<div class="page">
+		<p class="grade">等级特权</p>
+		<div class="swiper-container">
+			<div class="swiper-pagination"></div>
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					
+				    <div class="gradePic">
+				        <div class="gradePage">
+				            <img src="./img/5.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">等级图标</p>
+				            <p class="gradeBsc">LV1开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePageone">
+				            <img src="./img/7.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">头像挂件</p>
+				            <p class="gradeBsc">LV30开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/9.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">尊贵表情</p>
+				            <p class="gradeBsc">骑士开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/11.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">高级飘屏</p>
+				            <p class="gradeBsc">男爵开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePagetwo">
+				            <img src="./img/13.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">特级礼物</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/15.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">视频连麦</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				    </div>
+	    			
+				</div>
+				<div class="swiper-slide">
+					
+				    <div class="gradePic">
+				        <div class="gradePage">
+				            <img src="./img/5.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">等级图标</p>
+				            <p class="gradeBsc">LV1开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePageone">
+				            <img src="./img/7.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">头像挂件</p>
+				            <p class="gradeBsc">LV30开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/9.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">尊贵表情</p>
+				            <p class="gradeBsc">骑士开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/11.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">高级飘屏</p>
+				            <p class="gradeBsc">男爵开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePagetwo">
+				            <img src="./img/13.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">特级礼物</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/15.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">视频连麦</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				    </div>
+	    			
+				</div>
+				<div class="swiper-slide">
+					
+				    <div class="gradePic">
+				        <div class="gradePage">
+				            <img src="./img/5.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">等级图标</p>
+				            <p class="gradeBsc">LV1开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePageone">
+				            <img src="./img/7.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">头像挂件</p>
+				            <p class="gradeBsc">LV30开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/9.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">尊贵表情</p>
+				            <p class="gradeBsc">骑士开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/11.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">高级飘屏</p>
+				            <p class="gradeBsc">男爵开启</p>
+				        </div>
+				        <div class="gradePage" id="gradePagetwo">
+				            <img src="./img/13.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">特级礼物</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				        <div class="gradePage">
+				            <img src="./img/15.png" alt="" class="gradeCsc"/>
+				            <p class="gradeAsc">视频连麦</p>
+				            <p class="gradeBsc">子爵开启</p>
+				        </div>
+				    </div>
+	    			
+				</div>
+			</div>
+		</div>
+		<p class="gradeDsc">更多特权，敬请期待~</p>
+	    
+	</div>
+	
+	<div class="cup"></div>
+	
+	<div class="page">
+	    <p class="grade">如何快速升级</p>
+	    <div class="upPic">
+	        <img src="./img/17.png">
+	    </div>
+	    <div class="gradeP">
+	        <p>签到，直播，看播都可获得经验值，</p>
+	        <p>如不想等待，礼物刷起来，刷的越多升级越快~</p>
+	    </div>    
+	</div>
+	<script type="text/javascript" src="./js/swiper-3.4.2.min.js"></script>
+	<script type="text/javascript">
+			window.onload=function(){
+				var mySwiper=new Swiper('.swiper-container',{
+					pagination : '.swiper-pagination',
+				})
+			}
+	</script>
+</body>
+</html>
+

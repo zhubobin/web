@@ -1,0 +1,63 @@
+<admintpl file="header" />
+</head>
+<body>
+<style>
+input{
+  width:50px;
+}
+.form-horizontal textarea{
+ width:500px;
+}
+.nav-tabs>.current>a{
+    color: #95a5a6;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.nav li
+{
+	cursor:pointer
+}
+.nav li:hover
+{
+	cursor:pointer
+}
+</style>
+
+
+	<div class="wrap js-check-wrap">
+		<!-- <ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Config/index')}">设置</a></li>
+			<li><a href="{:U('Config/lists')}">管理</a></li>
+			<li><a href="{:U('Config/add')}">添加</a></li>
+		</ul> -->
+		<ul class="nav nav-tabs js-tabs-nav">
+			<li><a>兑换规则</a></li>
+		</ul>
+		
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('Exguize/set_post')}">
+			<input type="hidden" name="post['id']" value="1">
+			<div class="js-tabs-content">
+				<!-- 网站信息 -->
+				<div>
+					<fieldset>						
+						<div class="control-group">
+							<label class="control-label">兑换比例</label>
+							<div class="controls">				
+								<input type="text" name="post[guzi]" value="{$cunfig['guzi']}">%
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('SAVE')}</button>
+				<a class="btn" href="{:U('exguize/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/content_addtop.js"></script>
+</body>
+</html>

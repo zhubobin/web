@@ -1,0 +1,236 @@
+<?php
+
+class Domain_User {
+
+	public function getBaseInfo($userId) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getBaseInfo($userId);
+
+			return $rs;
+	}
+	
+	public function getRealName($userId) {
+		$rs = array();
+	
+		$model = new Model_User();
+		$rs = $model->getRealName($userId);
+	
+		return $rs;
+	}
+	
+	public function getRechargeList($userId) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getRechargeList($userId);
+
+			return $rs;
+	}
+	
+	public function checkName($uid,$name) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->checkName($uid,$name);
+
+			return $rs;
+	}
+	
+	public function userUpdate($uid,$fields) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->userUpdate($uid,$fields);
+
+			return $rs;
+	}
+	
+	public function updatePass($uid,$oldpass,$pass) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->updatePass($uid,$oldpass,$pass);
+
+			return $rs;
+	}
+
+	public function getBalance($uid) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getBalance($uid);
+
+			return $rs;
+	}
+	
+	public function getChargeRules() {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getChargeRules();
+
+			return $rs;
+	}
+	
+	public function getMessage($uid) {
+			$rs = array();
+		
+			$model = new Model_User();
+			$rs = $model->getMessage($uid);
+		
+			return $rs;
+	}
+	
+	public function setMessage($uid,$touid,$content,$type) {
+		$rs = array();
+	
+		$model = new Model_User();
+		$rs = $model->setMessage($uid,$touid,$content,$type);
+	
+		return $rs;
+	}
+	
+	public function getPage(){
+		$rs = array();
+		
+		$model = new Model_User();
+		$rs = $model->getPage();
+		
+		return $rs;
+	}
+	
+	public function getProfit($uid) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getProfit($uid);
+
+			return $rs;
+	}
+	
+	public function setChargeInfo($id,$uid,$touid,$type) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->setChargeInfo($id,$uid,$touid,$type);
+
+			return $rs;
+	}
+	
+	public function setExchangeInfo($uid,$guzi,$cuckoo) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->setExchangeInfo($uid,$guzi,$cuckoo);
+
+			return $rs;
+	}
+
+	public function setCash($uid,$money,$guzi) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->setCash($uid,$money,$guzi);
+
+			return $rs;
+	}
+	
+	public function setAlipay($alipay,$mobile,$real_name) {
+		$rs = array();
+	
+		$model = new Model_User();
+		$rs = $model->setAlipay($alipay,$mobile,$real_name);
+	
+		return $rs;
+	}
+	
+	public function setAuth($real_name,$mobile,$cer_no) {
+		$rs = array();
+	
+		$model = new Model_User();
+		$rs = $model->setAuth($real_name,$mobile,$cer_no);
+	
+		return $rs;
+	}
+	
+	public function setAttent($uid,$touid) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->setAttent($uid,$touid);
+
+			return $rs;
+	}
+	
+	public function setBlack($uid,$touid) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->setBlack($uid,$touid);
+
+			return $rs;
+	}
+	
+	public function getFollowsList($uid,$touid,$p) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getFollowsList($uid,$touid,$p);
+
+			return $rs;
+	}
+	
+	public function getFansList($uid,$touid,$p) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getFansList($uid,$touid,$p);
+
+			return $rs;
+	}
+
+	public function getBlackList($uid,$touid,$p) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getBlackList($uid,$touid,$p);
+
+			return $rs;
+	}
+
+	public function getLiverecord($touid,$p) {
+			$rs = array();
+
+			$model = new Model_User();
+			$rs = $model->getLiverecord($touid,$p);
+
+			return $rs;
+	}
+	
+	public function getUserHome($uid,$touid) {
+		$rs = array();
+
+		$model = new Model_User();
+		$rs = $model->getUserHome($uid,$touid);
+		return $rs;
+	}	
+	
+	public function getContributeList($touid,$p) {
+		$rs = array();
+
+		$model = new Model_User();
+		$rs = $model->getContributeList($touid,$p);
+		return $rs;
+	}	
+	
+	public function getAliCdnRecord($id) {
+        $rs = array();
+                
+        $model = new Model_Alicdnrecord();
+        $rs = $model->getAliCdnRecord($id);
+
+        return $rs;
+    }	
+}

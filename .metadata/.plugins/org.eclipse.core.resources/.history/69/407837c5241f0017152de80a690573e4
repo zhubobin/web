@@ -1,0 +1,221 @@
+<?php
+
+/**
+ * 兑换
+ */
+namespace Admin\Controller;
+use Common\Controller\AdminbaseController;
+class ExchangerulesController extends AdminbaseController {
+    function index(){
+			    	/* if($_REQUEST['status']!=''){
+			    		$map['status']=$_REQUEST['status'];
+			    		$_GET['status']=$_REQUEST['status'];
+			    		$cash['type']=1;
+			    	}
+			    	if($_REQUEST['start_time']!=''){
+			    		$map['addtime']=array("gt",strtotime($_REQUEST['start_time']));
+			    		$_GET['start_time']=$_REQUEST['start_time'];
+			    	}
+			    	
+			    	if($_REQUEST['end_time']!=''){
+			    			
+			    		$map['addtime']=array("lt",strtotime($_REQUEST['end_time']));
+			    		$_GET['end_time']=$_REQUEST['end_time'];
+			    	}
+			    	if($_REQUEST['start_time']!='' && $_REQUEST['end_time']!='' ){
+			    			
+			    		$map['addtime']=array("between",array(strtotime($_REQUEST['start_time']),strtotime($_REQUEST['end_time'])));
+			    		$_GET['start_time']=$_REQUEST['start_time'];
+			    		$_GET['end_time']=$_REQUEST['end_time'];
+			    	}
+			    	
+			    	if($_REQUEST['keyword']!=''){
+			    		$map['uid']=array("like","%".$_REQUEST['keyword']."%");
+			    		$_GET['keyword']=$_REQUEST['keyword'];
+			    	} */
+    	$gift_model=M("exchange_rules");
+    	$count=$gift_model->where($map)->count();
+    	$page = $this->page($count, 20);
+    	$lists = $gift_model
+    	->where($map)
+    	->order("addtime ASC")
+    	->limit($page->firstRow . ',' . $page->listRows)
+    	->select();
+		    	foreach($lists as $k=>$v){
+		    		$userinfo=M("users")->field("user_nicename")->where("id='$v[uid]'")->find();
+		    		$lists[$k]['userinfo']= $userinfo;
+		    	}
+    	$this->assign('lists', $lists);
+    	$this->assign("page", $page->show('Admin'));
+    	$this->display();
+    }
+		
+		function del(){
+			 	$id=intval($_GET['id']);
+					if($id){
+						$result=M("exchange_rules")->delete($id);				
+							if($result){
+									$this->success('删除成功');
+							 }else{
+									$this->error('删除失败');
+							 }			
+					}else{				
+						$this->error('数据传入失败！');
+					}								  
+					$this->display();				
+		}		
+    //排序
+    public function listorders() { 
+		
+        $ids = $_POST['listorders'];
+        foreach ($ids as $key => $r) {
+            $data['orderno'] = $r;
+            M("gift")->where(array('id' => $key))->save($data);
+        }
+				
+        $status = true;
+        if ($status) {
+            $this->success("排序更新成功！");
+        } else {
+            $this->error("排序更新失败！");
+        }
+    }	
+    
+
+		function add(){
+				$gift_sort=M("exchange_rules")->getField("id,sortname");
+				$this->assign('exchange_rules', $gift_sort);					
+			
+				$this->display();				
+		}	
+		function add_post(){
+				if(IS_POST){			
+					 $exchangerulesangerulesangerules=M("exchange_rules");
+					 $gift->create();
+					 $gift->addtime=time();
+					 $result=$exchangerules->add(); 
+					 if($result){
+						  $this->success('添加成功');
+					 }else{
+						  $this->error('添加失败');
+					 }
+				}			
+		}		
+		function edit(){
+			 	$id=intval($_GET['id']);
+					if($id){
+						$exchangerules = M("exchange_rules")->find($id);
+						$this->assign('exchangerules', $exchangerules);						
+					}else{				
+						$this->error('数据传入失败！');
+					}								  
+					$this->display();				
+		}
+		
+		function edit_post(){
+				if(IS_POST){			
+					 $exchangerules=M("exchange_rules");
+					 $exchangerules->create();
+					 $result=$user->save(); 
+					 if($result){
+						  $this->success('修改成功');
+					 }else{
+						  $this->error('修改失败');
+					 }
+				}			
+		}
+		
+    function sort_index(){
+	
+    	$gift_sort=M("gift_sort");
+    	$count=$gift_sort->count();
+    	$page = $this->page($count, 20);
+    	$lists = $gift_sort
+    	->where()
+    	->order("orderno asc")
+    	->limit($page->firstRow . ',' . $page->listRows)
+    	->select();
+    	$this->assign('lists', $lists);
+    	$this->assign("page", $page->show('Admin'));
+    	
+    	$this->display();
+    }		
+		
+		function sort_del(){
+			 	$id=intval($_GET['id']);
+					if($id){
+						$result=M("gift_sort")->delete($id);				
+							if($result){
+									$this->success('删除成功');
+							 }else{
+									$this->error('删除失败');
+							 }						
+					}else{				
+						$this->error('数据传入失败！');
+					}								  
+					$this->display();				
+		}		
+    //排序
+    public function sort_listorders() { 
+		
+        $ids = $_POST['listorders'];
+        foreach ($ids as $key => $r) {
+            $data['orderno'] = $r;
+            M("gift_sort")->where(array('id' => $key))->save($data);
+        }
+				
+        $status = true;
+        if ($status) {
+            $this->success("排序更新成功！");
+        } else {
+            $this->error("排序更新失败！");
+        }
+    }				
+    function sort_add(){
+		    	
+    	$this->display();
+    }		
+		function do_sort_add(){
+
+				if(IS_POST){	
+            if($_POST['sortname']==''){
+							  $this->error('分类名称不能为空');
+							
+						}
+				
+					 $gift_sort=M("gift_sort");
+					 $gift_sort->create();
+					 $gift_sort->addtime=time();
+					 
+					 $result=$gift_sort->add(); 
+					 if($result){
+						  $this->success('添加成功');
+					 }else{
+						  $this->error('添加失败');
+					 }
+				}				
+    }		
+    function sort_edit(){
+
+			 	$id=intval($_GET['id']);
+					if($id){
+						$sort	=M("gift_sort")->find($id);
+						$this->assign('sort', $sort);						
+					}else{				
+						$this->error('数据传入失败！');
+					}								      	
+    	$this->display();
+    }			
+		function do_sort_edit(){
+				if(IS_POST){			
+					 $gift_sort=M("gift_sort");
+					 $gift_sort->create();
+					 $result=$gift_sort->save(); 
+					 if($result){
+						  $this->success('修改成功');
+					 }else{
+						  $this->error('修改失败');
+					 }
+				}	
+    }
+}

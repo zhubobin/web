@@ -1,0 +1,41 @@
+<admintpl file="header" />
+</head>
+<body>
+	<div class="wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:U('Exchangerules/edit')}">编辑</a></li>
+		</ul>
+		<form method="post" class="form-horizontal js-ajax-form" action="{:U('Exchangerules/edit_post')}">
+		   <input type="hidden" name="id" value="{$exchangerules['id']}">
+			<fieldset>
+
+				
+				<div class="control-group">
+					<label class="control-label">咘谷豆</label>
+					<div class="controls">
+						<input type="text" name="cuckoo" value="{$exchangerules['cuckoo']}" onkeypress="guzirules();">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">谷子</label>
+					<div class="controls">
+						<input type="text" name="guzi"  value="{$exchangerules['guzi']}">
+						<span class="form-required">*</span>
+					</div>
+				</div>
+				<input type="hidden" name="exchange_rate" value="{$config['exchange_rate']}">%
+			</fieldset>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:L('EDIT')}</button>
+				<a class="btn" href="{:U('Exchangerules/index')}">{:L('BACK')}</a>
+			</div>
+		</form>
+	</div>
+	<script src="__PUBLIC__/js/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/content_addtop.js"></script>
+</body>
+</html>
+<script>
+	
+</script>
