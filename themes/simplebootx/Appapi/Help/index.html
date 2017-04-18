@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>帮助中心</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<script type="text/javascript" src="http://n.sinaimg.cn/ah/js/jquery1.9.0.js"></script>
+</head>
+<script type="text/javascript">
+	function calcuroot_size(blockWidth){
+		var root_size=100*(blockWidth/750);
+		$("html").css({"font-size":root_size+"px"});
+	}
+	calcuroot_size(window.innerWidth);
+</script>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	img{
+		vertical-align: middle;
+	}
+	li,ul{
+		list-style-type: none;
+	}
+	body{
+		font-family: '微软雅黑';
+	}
+	.page{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background:#F4F4F4;
+	}
+	.page:before{
+		display: table;
+		content: '';
+	}
+	#status{
+	    width:100%;
+		height:0.4rem;
+		background:#FFFFFF;
+	}
+	#status:before{
+		display: table;
+		content: '';
+    }
+	#nav{
+	    width:100%;
+		height:0.88rem;
+		background:#FFFFFF;
+		background-image:url(public/appapi/images/help/return_back.png);
+		background-repeat:no-repeat;
+		background-position:0.3rem center;
+		background-size:0.44rem;
+	}
+	#nav p{
+	    font-size:0.34rem;
+		text-align:center;
+		line-height:0.88rem;
+		color:#373737;
+	}
+    #nav:before{
+		display: table;
+		content: '';
+    }
+    .img>img{
+	    height:2.97rem;
+    	width:100%;
+    }
+	.top{
+	    height: 0.9rem;
+	    width: 100%;
+	    background: #FFF;
+	    background-image: url(public/appapi/images/help/3.png);
+	    background-repeat: no-repeat;
+	    background-position: 0.3rem center;
+	    background-size:0.4rem 0.34rem;
+	}
+	.top p{
+	    font-size:0.28rem;
+		color:#58BFBD;
+		line-height:0.9rem;
+		margin-left:0.93rem;
+	}
+	.guess{
+	    height:0.9rem;
+		width:100%;
+		background:#F4F4F4;
+	}
+	.guess p{
+	    font-size:0.28rem;
+		color:#B0B0B0;
+		line-height:0.9rem;
+		margin-left:0.3rem;
+	}
+	#box{
+	    height:1.8rem;
+		width:100%;
+		background:#FFF;
+	}
+	#pox{
+	    height:3.49rem;
+		width:100%;
+		background:#FFF;
+	}
+    .forTop{
+		margin:0 auto;
+		width: 0.49rem;
+		height: 0.49rem;
+		background: url(public/appapi/images/help/11.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.16rem;
+	}
+	.upBottom{
+		width: 0.39rem;
+		height: 0.16rem;
+		margin:0 auto;
+		background:url(public/appapi/images/help/13.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.23rem;
+		margin-bottom:1.85rem;
+	}
+	.gap{
+	    height:0.12rem;
+		width:100%;
+		background:#F4F4F4;
+	}
+	.left{
+		float:left;
+		width: 1.70rem;
+		text-align: center;
+		border-right:0.01rem solid #B0B0B0;
+	}
+	.oneTop{
+		margin:0 auto;
+		width: 0.49rem;
+		height: 0.49rem;
+		background: url(public/appapi/images/help/5.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.16rem;
+	}
+    .twoTop{
+		margin:0 auto;
+		width: 0.49rem;
+		height: 0.49rem;
+		background: url(public/appapi/images/help/9.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.16rem;
+	}
+    .thrTop{
+		margin:0 auto;
+		width: 0.49rem;
+		height: 0.49rem;
+		background: url(public/appapi/images/help/15.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.16rem;
+	}
+	.inMid{
+		font-size: 0.28rem;
+		color:#58BFBD;
+		margin-top: 0.23rem;
+	}
+	.inBottom{
+		width: 0.39rem;
+		height: 0.18rem;
+		margin:0 auto;
+		background:url(public/appapi/images/help/7.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-top:0.23rem;
+		margin-bottom:0.14rem;
+	}
+	.right{
+		float:right;
+	    width:5.725rem;
+	}
+	.uptop{
+	    width:100%;
+		height:0.9rem;
+		border-bottom:0.01rem solid #B0B0B0;
+	}
+	.updown{
+	    width:100%;
+		height:0.9rem;
+	}
+	.upline{
+	    width:100%;
+		height:0.9rem;
+		border-bottom:0.01rem solid #B0B0B0;
+	}
+	.right p{
+	    font-size:0.28rem;
+		color:#373737;
+		line-height:0.9rem;
+		padding-left:0.3rem;
+	}
+	#foot{
+	    height:1.12rem;
+		width:100%;
+		background:#FFF;
+	}
+	.downleft{
+		float:left;
+	    width:3.7rem;
+	}
+	.downright{
+		float:right;
+	    width:3.7rem;
+	}
+	.uppic{
+		width: 0.44rem;
+		height: 0.44rem;
+		background: url(public/appapi/images/help/17.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-left:1rem;
+		position:absolute;
+		margin-top:0.34rem;
+		margin-bottom:0.34rem;
+	}
+	.downpic{
+	    margin:0 auto;
+		width: 0.44rem;
+		height: 0.44rem;
+		background: url(public/appapi/images/help/19.png) no-repeat center top;
+		background-size: 100% 100%;
+		margin-left:1rem;
+		position:absolute;
+		margin-top:0.34rem;
+		margin-bottom:0.34rem;
+	}
+	#foot p{
+	        font-size: 0.28rem;
+		    color: #58BFBD;
+		    line-height: 1.12rem;
+		    margin-left: 1.61rem;
+		    border-right: 0.01rem solid #B0B0B0;
+	}
+	#foot p.clearRight{
+	   border-right:none;
+	}
+</style>
+<body>
+	<div class="page">
+		<div id="status"></div>
+	    <div id="nav"><p>帮助中心</p></div>
+	    <div class="img"><img src="http://192.168.1.109/web/public/appapi/images/help/1.png" alt="" /></div>
+	    <div class="top"><p>置顶问题（如咘谷豆充值问题）</p></div>
+	    <div class="guess"><p>猜你遇到了以下问题</p></div>
+	    <div id="box">
+	        <div class="left">
+	        	<div class="oneTop"></div>
+	        	<p class="inMid">充值问题</p>
+	        	<div class="inBottom"></div>
+	        </div>
+	        <div class="right">
+	            <div class="uptop"><p>支持哪些充值方式？</p></div>
+	            <div class="updown"><p>为什么我充值会失败？</p></div>
+	        </div>
+	    </div>
+	    <div class="gap"></div>
+	    <div id="box">
+	        <div class="left">
+	        	<div class="twoTop"></div>
+	        	<p class="inMid">提现问题</p>
+	        	<div class="inBottom"></div>
+	        </div>
+	        <div class="right">
+	            <div class="uptop"><p>咘谷如何提现？</p></div>
+	            <div class="updown"><p>提现比例是多少？</p></div>
+	        </div>
+	    </div>
+	    <div class="gap"></div>
+	    <div id="pox">
+	        <div class="left">
+	        	<div class="forTop"></div>
+	        	<p class="inMid">直播问题</p>
+	        	<div class="upBottom"></div>
+	        </div>
+	        <div class="right">
+	            <div class="uptop"><p>如何手机直播？</p></div>
+	            <div class="upline"><p>如何上热门？</p></div>
+	            <div class="uptop"><p>如何修改直播封面？</p></div>
+	            <div class="updown"><p>关注与私信？</p></div>
+	        </div>
+	    </div>
+	    <div class="gap"></div>
+	    <div id="box">
+	        <div class="left">
+	        	<div class="thrTop"></div>
+	        	<p class="inMid">认证问题</p>
+	        	<div class="inBottom"></div>
+	        </div>
+	        <div class="right">
+	            <div class="uptop"><p>怎么实名认证？</p></div>
+	            <div class="updown"><p>认证用户如何修改个人信息？</p></div>
+	        </div>
+	    </div>
+	    <div class="gap"></div>
+	    <div id="foot">
+	        <div class="downleft">
+	            <div class="uppic"></div>
+	            <p>意见反馈</p>
+	        </div>
+	        <div class="downright">
+	            <div class="downpic"></div>
+	            <p class="clearRight">联系客服</p>
+	        </div>
+	    </div>
+	</div>
+</body>
+</html>

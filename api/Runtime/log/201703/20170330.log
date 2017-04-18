@@ -1,0 +1,8 @@
+2017-03-30 17:59:58|ERROR|Home.getHot|exception 'RedisException' with message 'Redis server went away' in E:\wamp\www\web\api\Appapi\Api\Common.php:13
+Stack trace:
+#0 E:\wamp\www\web\api\Appapi\Api\Common.php(13): Redis->auth('tieweishivps')
+#1 E:\wamp\www\web\api\Appapi\Api\Common.php(5): Api_Common->connectionRedis()
+#2 E:\wamp\www\web\api\PhalApi\PhalApi\ApiFactory.php(57): Api_Common->__construct()
+#3 E:\wamp\www\web\api\PhalApi\PhalApi.php(55): PhalApi_ApiFactory::generateService()
+#4 E:\wamp\www\web\api\public\index.php(14): PhalApi->response()
+#5 {main}

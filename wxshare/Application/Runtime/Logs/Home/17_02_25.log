@@ -1,0 +1,27 @@
+[ 2017-02-25T15:11:32+08:00 ] 140.205.201.43 /wxshare/index.php/Share/'%22/%3E%3C/script%3E%3Cscript%3Ealert()%3C/script%3E
+ERR: 非法操作:'"
+
+[ 2017-02-25T15:12:03+08:00 ] 140.205.201.43 /wxshare/index.php/Share/%27%22%2f%3E%3C%2fscript%3E%3Cscript%3Ealert%28%29%3C%2fscript%3E
+ERR: 非法操作:'"
+
+[ 2017-02-25T15:12:33+08:00 ] 140.205.201.43 /wxshare/index.php/Share/%2527%2522%252f%253E%253C%252fscript%253E%253Cscript%253Ealert%2528%2529%253C%252fscript%253E
+ERR: 非法操作:%2527%2522%252f%253e%253c%252fscript%253e%253cscript%253ealert%2528%2529%253c%252fscript%253e
+
+[ 2017-02-25T15:12:43+08:00 ] 140.205.201.43 /wxshare/index.php/Share/'%22+onmouseover=alert()+d='%22
+ERR: 非法操作:'"%2bonmouseover=alert()%2bd='"
+
+[ 2017-02-25T15:12:46+08:00 ] 140.205.201.43 /wxshare/index.php/Share/%27%22%20onmouseover%3Dalert%28%29%20d%3D%27%22
+ERR: 非法操作:'"%20onmouseover=alert()%20d='"
+
+[ 2017-02-25T15:12:48+08:00 ] 140.205.201.43 /wxshare/index.php/Share/%2527%2522%2520onmouseover%253Dalert%2528%2529%2520d%253D%2527%2522
+ERR: 非法操作:%2527%2522%2520onmouseover%253dalert%2528%2529%2520d%253d%2527%2522
+
+[ 2017-02-25T18:40:31+08:00 ] 210.56.52.43 /wxshare/index.php/Phone/Public/phone/js/jwpsrv1.js
+ERR: 非法操作:public
+
+[ 2017-02-25T18:40:32+08:00 ] 210.56.52.43 /wxshare/index.php/Phone/Public/phone/js/jwpsrv1.js
+ERR: 非法操作:public
+
+[ 2017-02-25T18:40:36+08:00 ] 210.56.52.43 /wxshare/index.php/Phone/Public/phone/js/jwpsrv1.js
+ERR: 非法操作:public
+

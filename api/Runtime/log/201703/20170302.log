@@ -1,0 +1,67 @@
+2017-03-02 10:04:25|ERROR|Live.createRoom|exception 'PDOException' with message 'Unknown column 'id' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT status F...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Common.php(369): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Common.php(69): Model_Common->isAuth(122)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Common.php(239): Domain_Common->isAuth(122)
+#6 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(193): Api_Common->isAuth(122)
+#7 [internal function]: Api_Live->createRoom()
+#8 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#9 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#10 {main}
+2017-03-02 10:04:59|ERROR|Live.createRoom|exception 'PDOException' with message 'Unknown column 'id' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT status F...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Common.php(369): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Common.php(69): Model_Common->isAuth(7772)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Common.php(239): Domain_Common->isAuth(7772)
+#6 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(192): Api_Common->isAuth(7772)
+#7 [internal function]: Api_Live->createRoom()
+#8 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#9 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#10 {main}
+2017-03-02 10:05:01|ERROR|Live.createRoom|exception 'PDOException' with message 'Unknown column 'id' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT status F...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Common.php(369): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Common.php(69): Model_Common->isAuth(7772)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Common.php(239): Domain_Common->isAuth(7772)
+#6 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(192): Api_Common->isAuth(7772)
+#7 [internal function]: Api_Live->createRoom()
+#8 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#9 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#10 {main}
+2017-03-02 10:05:03|ERROR|Live.createRoom|exception 'PDOException' with message 'Unknown column 'id' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT status F...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Common.php(369): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Common.php(69): Model_Common->isAuth(7772)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Common.php(239): Domain_Common->isAuth(7772)
+#6 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(192): Api_Common->isAuth(7772)
+#7 [internal function]: Api_Live->createRoom()
+#8 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#9 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#10 {main}
+2017-03-02 10:05:16|ERROR|Live.createRoom|exception 'PDOException' with message 'Unknown column 'id' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT status F...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Common.php(369): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Common.php(69): Model_Common->isAuth(122)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Common.php(239): Domain_Common->isAuth(122)
+#6 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(192): Api_Common->isAuth(122)
+#7 [internal function]: Api_Live->createRoom()
+#8 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#9 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#10 {main}
+2017-03-02 15:37:51|DEBUG|succeed to upload file to qiniu|{"hash":"FroujNKbVs_no0Rz03MRNJhn9nZh","key":"20170302153750_3a4c5921bce4fc59fdbb9edb4d30be6c"}
+2017-03-02 20:08:53|DEBUG|succeed to upload file to qiniu|{"hash":"FjUl_7jXsRuDkbjXYACDu7SxBWiK","key":"20170302200853_1dce0505eb362a139d21ad2633f7e6e1"}

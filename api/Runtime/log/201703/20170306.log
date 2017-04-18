@@ -1,0 +1,358 @@
+2017-03-06 09:10:38|DEBUG|succeed to upload file to qiniu|{"hash":"FoCQ_HjEgMU9Hr-YIblDx-Y7aUeq","key":"20170306091038_ecd6d27f296734cfc28c717dd6dbafc7"}
+2017-03-06 09:31:06|DEBUG|succeed to upload file to qiniu|{"hash":"Fq8Pv3SYGrJsaH4oibGHKkKTg0GU","key":"20170306093105_f2a47b7804f4f52a1fcb76a2a060f6df"}
+2017-03-06 09:45:49|DEBUG|succeed to upload file to qiniu|{"hash":"FrOhr8rKSUNdrkr69eFYUulo6IKd","key":"20170306094549_df6726274e86e18eb488bd68d1dcd4bf"}
+2017-03-06 11:26:42|DEBUG|succeed to upload file to qiniu|{"hash":"Fi7Sym1BODVSN3twu6jv1HMUMtsh","key":"20170306112642_7490f3fdd67d4f871e08fb059ab6c00d"}
+2017-03-06 11:41:00|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:41:10|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:42:17|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:42:35|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:42:59|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:43:00|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:43:27|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:43:44|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '8', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '8', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:44:44|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(35): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '16', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '16', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:44:51|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gimeid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(35): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '16', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(67): Domain_Game->endGame(122, '16', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 11:45:39|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114539_ce58b3ca0d3f44437f284dd8463315b7"}
+2017-03-06 11:45:39|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 11:45:42|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114542_c5b3cc1bdb315a5acb09692efdbf9bc7"}
+2017-03-06 11:45:42|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 11:45:47|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114547_0e982f696e4946b655191181ae45426d"}
+2017-03-06 11:45:47|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 11:46:04|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114603_9345375d1f5aad087360f7b5f7a6fbe7"}
+2017-03-06 11:46:04|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 11:46:06|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114606_a53849a5a8a0e5416f219439161f4596"}
+2017-03-06 11:46:06|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 11:46:12|DEBUG|succeed to upload file to qiniu|{"hash":"FjmgJwD7rnXWg1V8B99lENrGK1u1","key":"20170306114612_fe9d73bd46878cadcc48753156935ac2"}
+2017-03-06 11:47:02|ERROR|Live.createRoom|exception 'PDOException' with message 'Data too long for column 'type_val' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Live.php(15): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Live.php(9): Model_Live->createRoom(7888, Array)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Live.php(286): Domain_Live->createRoom(7888, Array)
+#5 [internal function]: Api_Live->createRoom()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 14:46:01|ERROR|Game.Jinhua|exception 'PDOException' with message 'Unknown column 'atate' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(16): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(13): Model_Game->record(122, '66_1488765986', '4c27b813166944b...', 'jinhuaGame', 1488782761)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(33): Domain_Game->record(122, '66_1488765986', '4c27b813166944b...', 'jinhuaGame', 1488782761)
+#6 [internal function]: Api_Game->Jinhua()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 14:47:19|ERROR|Game.Jinhua|exception 'PDOException' with message 'Unknown column 'atate' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(16): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(13): Model_Game->record(122, '66_1488765986', '4c27b813166944b...', 'jinhuaGame', 1488782839)
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(33): Domain_Game->record(122, '66_1488765986', '4c27b813166944b...', 'jinhuaGame', 1488782839)
+#6 [internal function]: Api_Game->Jinhua()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 14:53:05|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gameid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '34', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(73): Domain_Game->endGame(122, '34', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 14:53:15|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gameid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '34', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(73): Domain_Game->endGame(122, '34', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 14:53:37|ERROR|Game.endGame|exception 'PDOException' with message 'Unknown column 'gameid' in 'where clause'' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(774): NotORM_Result->query('SELECT * FROM c...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(842): NotORM_Result->execute()
+#2 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(834): NotORM_Result->fetchRow('')
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(34): NotORM_Result->fetchOne()
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(19): Model_Game->endGame(122, '34', '1')
+#5 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(73): Domain_Game->endGame(122, '34', '1')
+#6 [internal function]: Api_Game->endGame()
+#7 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#8 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#9 {main}
+2017-03-06 15:20:08|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', NULL)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', NULL)
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:20:24|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', NULL)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', NULL)
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:20:24|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', NULL)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', NULL)
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:20:55|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', NULL)
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', NULL)
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:22:37|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:23:45|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:25:28|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:25:29|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(63): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:26:26|ERROR|Game.JinhuaBet|exception 'PDOException' with message 'Data truncated for column 'coin' at row 1' in /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php:240
+Stack trace:
+#0 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(317): NotORM_Result->query('INSERT INTO cmf...', Array)
+#1 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/NotORM/NotORM/Result.php(334): NotORM_Result->insert_multi(Array)
+#2 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Model/Game.php(64): NotORM_Result->insert(Array)
+#3 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Domain/Game.php(26): Model_Game->gameBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#4 /data/wwwroot/live.yunbaozhibo.com/api/Appapi/Api/Game.php(91): Domain_Game->JinhuaBet(122, '41', '4c27b813166944b...', 'jinhuaGame')
+#5 [internal function]: Api_Game->JinhuaBet()
+#6 /data/wwwroot/live.yunbaozhibo.com/api/PhalApi/PhalApi.php(57): call_user_func(Array)
+#7 /data/wwwroot/live.yunbaozhibo.com/api/public/index.php(14): PhalApi->response()
+#8 {main}
+2017-03-06 15:56:48|DEBUG|succeed to upload file to qiniu|{"hash":"FneIr8gnie3H2YawChmhOtub1Ys3","key":"20170306155647_b15cf02247e9f095097cf51ff395b2ad"}
+2017-03-06 17:20:31|DEBUG|succeed to upload file to qiniu|{"hash":"FkbZ-OxJpi6Xif1NwhXfdbFqivDI","key":"20170306172031_cc8fdc5d6cbd990498b1b0e2ab85ea79"}
+2017-03-06 17:39:01|DEBUG|succeed to upload file to qiniu|{"hash":"Fvq-hk_7xaTEmKEPxIfHHmyyt5vK","key":"20170306173901_44ed527dcfaf1f1f385f9f13a027430c"}

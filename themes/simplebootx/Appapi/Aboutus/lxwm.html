@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>联系我们</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<script type="text/javascript" src="http://n.sinaimg.cn/ah/js/jquery1.9.0.js"></script>
+</head>
+<script type="text/javascript">
+	function calcuroot_size(blockWidth){
+		var root_size=100*(blockWidth/750);
+		$("html").css({"font-size":root_size+"px"});
+	}
+	calcuroot_size(window.innerWidth);
+</script>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	img{
+		vertical-align: middle;
+	}
+	li,ul{
+		list-style-type: none;
+	}
+	body{
+		font-family: '微软雅黑';
+	}
+	.page{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background:#F4F4F4;
+	}
+	.page:before{
+		display: table;
+		content: '';
+	}
+	#status{
+	    width:100%;
+		height:0.4rem;
+		background:#58BFBD;
+	}
+	#status:before{
+		display: table;
+		content: '';
+    }
+	#nav{
+	    width:100%;
+		height:0.88rem;
+		background:#58BFBD;
+		background-image:url(./img/return_back.png);
+		background-repeat:no-repeat;
+		background-position:0.3rem center;
+		background-size:0.9rem;
+	}
+	#nav p{
+	    font-size:0.34rem;
+		text-align:center;
+		line-height:0.88rem;
+		color:#373737;
+	}
+    #nav:before{
+		display: table;
+		content: '';
+    }
+	.div{
+	    font-size:0.28rem;
+		color:#373737;
+		margin-left:0.3rem;
+	}
+	.div p{
+	    line-height:0.56rem;
+	}
+</style>
+<body>
+	<div class="page">
+	    <div id="nav"><p>联系我们</p></div>
+	      <div class=div>
+			    <p>邮编：23000</p>
+			    <p>邮箱：postmaster@bugucm.com</p>
+			    <p>客服QQ：暂定</p>
+          </div>
+	</div>
+</body>
+</html>
