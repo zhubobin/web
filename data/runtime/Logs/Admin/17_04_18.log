@@ -1,0 +1,6 @@
+[ 2017-04-18T12:59:31+08:00 ] 192.168.13.1 /index.php?g=Admin&m=Menu&a=index&menuid=100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
+[ 2017-04-18T12:59:34+08:00 ] 192.168.13.1 /index.php?g=Admin&m=Menu&a=edit&id=132&menuid=100
+NOTIC: D方法实例化没找到模型类Common\Model\AuthRuleModel
+
