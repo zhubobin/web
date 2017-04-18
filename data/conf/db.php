@@ -7,7 +7,7 @@ return array(
     'DB_HOST' => '192.168.1.109',
     'DB_NAME' => 'phonelive',
     'DB_USER' => 'root',
-    'DB_PWD' => '',
+    'DB_PWD' => 'qq123',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'cmf_',
 						

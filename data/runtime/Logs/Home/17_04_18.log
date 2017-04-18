@@ -24,3 +24,26 @@ ERR: SQLSTATE[42000] [1049] Unknown database 'phonelive'
 [ 2017-04-18T12:32:03+08:00 ] 192.168.13.1 /
 ERR: SQLSTATE[42000] [1049] Unknown database 'phonelive'
 
+[ 2017-04-18T12:33:18+08:00 ] 192.168.13.1 /
+ERR: SQLSTATE[28000] [1045] Access denied for user 'root'@'192.168.1.57' (using password: NO)
+
+[ 2017-04-18T12:33:49+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0453s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0463s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0459s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0494s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0461s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0434s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0455s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0473s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0469s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
