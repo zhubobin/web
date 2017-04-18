@@ -4,7 +4,7 @@
  */
 return array(
     'DB_TYPE' => 'mysqli',
-    'DB_HOST' => 'localhost',
+    'DB_HOST' => '192.168.1.109',
     'DB_NAME' => 'phonelive',
     'DB_USER' => 'root',
     'DB_PWD' => '',

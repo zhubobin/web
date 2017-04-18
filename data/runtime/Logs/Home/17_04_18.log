@@ -18,3 +18,9 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
 
+[ 2017-04-18T12:32:02+08:00 ] 192.168.13.1 /
+ERR: SQLSTATE[42000] [1049] Unknown database 'phonelive'
+
+[ 2017-04-18T12:32:03+08:00 ] 192.168.13.1 /
+ERR: SQLSTATE[42000] [1049] Unknown database 'phonelive'
+
