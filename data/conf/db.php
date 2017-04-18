@@ -4,14 +4,10 @@
  */
 return array(
     'DB_TYPE' => 'mysqli',
-    'DB_HOST' => '192.168.1.109',
+    'DB_HOST' => 'localhost',
     'DB_NAME' => 'phonelive',
-
-//    'DB_USER' => 'phonelive',
-//    'DB_PWD' => 'tieweishivps',
-
     'DB_USER' => 'root',
-    'DB_PWD' => 'qq123',
+    'DB_PWD' => '',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'cmf_',
 						

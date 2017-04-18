@@ -64,10 +64,13 @@
 		<script type="text/javascript" src="/public/home/hxChat/js/webim.js"></script>
 
 		<!-- 环信私信功能end -->
-<title><?php echo ($site_name); ?></title>
+<title>充值页面</title>
+
+<link type="text/css" rel="stylesheet" href="/public/home/css/payment.css"/>
 </head>
-<body style="background-color:#f3f3f3">
-	<div id="doc-hd" class="header double">
+<body>
+
+		<div id="doc-hd" class="header double">
 		<div class="topbar">
 			<div class="container clearfix">
 				<div class="hd-logo">
@@ -151,118 +154,151 @@
 	</div>
 
 
-<link type="text/css" rel="stylesheet" href="/public/home/css/common.css"/>
-<link type="text/css" rel="stylesheet" href="/public/home/css/Personal.css"/>
-<link type="text/css" rel="stylesheet" href="/public/home/css/font-awesome.min.css"/>
-<div class="headers">
-  <div class="container" style="padding-top:20px">
-    <div class="hersleft">
-			<a href="web/index.php?m=Personal&a=photo" style="display:inline-block;height:88px">
-				<img src="<?php echo ($info['avatar']); ?>" alt="" class="herszhezhao">
-				<i class="herszhezhao">
-				</i>
-			</a>
-		</div>
-		<div class="hersright">
-			<div style="display:black" id="datas">
-				<div>
-					<span><?php echo ($info['user_nicename']); ?></span>
-					<i class="dianji" id="dianji"></i>
-				</div>
-				<p title="<?php echo ($info['user_login']); ?>">个人账号：<?php echo ($info['user_login']); ?></p>
-			</div>
-			<div style="display:none" id="modify">
-				<input id="name" placeholder="请输入新昵称">
-				<p>
-					<span class="hersbaocun" >保存</span>
-					<span class="hersquxiao">取消</span>
-				</p>
-			</div>
-		</div>
-  </div>
-</div>
-<div class="container">
-	<div class="Firstfloor">
-		<div class="Leftlayout">
-			<ul id="accordion" class="accordion">
-	    <li>
-	      <a class="homepage"  href="index.php?m=Personal&a=index"><!-- <i class="fa fa-paint-brush"></i> -->我的首页
-		  </a>
-		</li>
-		<li <?php if($personal == 'Set'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link" >账号设置<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'Set'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=modify">基本资料</a></li>
-				<li><a href="index.php?m=Personal&a=photo">修改头像</a></li>
-				<li><a href="index.php?m=Personal&a=updatepass">修改密码</a></li>
-			</ul>
-		</li>
-		<li <?php if($personal == 'follow'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link">我的社交<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'follow'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=follow">我的关注</a></li>
-				<li><a href="index.php?m=Personal&a=fans">我的粉丝</a></li>
-				<li><a href="index.php?m=Personal&a=namelist">我的黑名单</a></li>
-				<li><a href="index.php?m=Personal&a=admin">我的管理员</a></li>
-				<li><a href="index.php?m=Personal&a=live">我的直播</a></li>
-			</ul>
-		</li>
-		<li <?php if($personal == 'card'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link">我的认证<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'card'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=card">我要认证</a></li>
-				<li><a href="index.php?m=Personal&a=exchange">提现中心</a></li>
-			</ul>
-		</li>
-	</ul>
-		</div>
-		<div class="rightlayout">
-			<div class="clearfix">
-				<div class="shouyez">
-					<h3 class="personal_h3">
-						<i class="h3_one"></i>
-						我的账户资产
-					</h3>
-					<div>
-						<ul>
-							<li style="border-left:0 none" class="one">
-								<i></i>
-								<div>
-									<span><?php echo ($getConfigName['name_coin']); ?></span>
-									<?php if($info['coin'] == ''): ?><span>0</span>
+
+<div class="wrapper">
+
+
+<div id="doc-bd">
+    <div id="charge-container" class="container clearfix">
+        <div class="side">
+            <ul class="sidebar">
+                <li class="active">
+                    <a href="#">钻石充值</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <ul class="breadcrumb clearfix">
+                <li class="step1 active">
+                    1.确认支付信息
+                </li>
+                <li class="step2">
+                    2.扫码支付
+                </li>
+                <li class="step3">
+                    3.支付成功
+                </li>
+            </ul>
+			<div style="display:block" id="xuanze">
+				<form id="fpost" action="/index.php/Home/Payment/chargepay/" method="post">
+					<input type="hidden" name="changeid" value="<?php echo ($lists[0]['id']); ?>" id="changeid">
+					<input type="hidden" name="c_PPPayID" value="zhifubao" id="c_PPPayID">
+					<ul class="chargebox">
+						<li class="step1 active">
+							<div class="row user-info clearfix">
+								<div class="label">
+									当前充值账号：
+								</div>
+								<div class="content clearfix">
+									<a href="#" class="red" target="_blank">
+										<b class="nickname"><?php echo ($user["user_nicename"]); ?></b>
+										<b class="uid">(<?php echo ($user["id"]); ?>)</b>
+									</a>
+									 <span class="balance-label">您的钻石余额：<b class="red balance"><?php echo ($user["coin"]); ?></b></span>
+								 </div>
+							</div>
+							<div class="row charge-select clearfix">
+								<div class="label">
+									充值数量：
+								</div>
+								<div class="content">
+									<ul id="package-list" class="package-list clearfix" >
+										<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li class="item <?php if($i == 1): ?>active<?php endif; ?>" data-amount="<?php echo ($v['coin']); ?>" data-price="<?php echo ($v['money']); ?>" data-id="<?php echo ($v['id']); ?>">
+											<a data-text="<?php echo ($v['money']); ?>" href="javascript:void(0);">
+												<b class="amount"><?php echo ($v['name']); ?> <?php if($v['give'] > 0): ?><span>送<?php echo ($v['give']); ?></span><?php endif; ?></b>
+												<b class="price">¥<?php echo ($v['money']); ?></b>
+											</a>
+										</li><?php endforeach; endif; else: echo "" ;endif; ?>
+									</ul>
+								</div>
+							</div>
+							<div class="row charge-cost clearfix">
+								<div class="label">
+									应付金额：
+								</div>
+								<div class="content">
+									<b id="c_Money1" class="cost red"><?php echo ($lists[0]['money']); ?></b>元
+								</div>
+							</div>
+							<div class="row charge-source clearfix">
+								<div class="label">
+									支付平台：
+								</div>
+								<div class="content">
+									<ul id="charge-source-list" class="charge-source-list clearfix" bk="">
+									<?php if($getConfigPri['aliapp_pc'] == '1'): ?><li class="item alipay "  data-index="0" data-source="ali" data-title="支付宝">
+											<a href="javascript:void(0);" data-text="支付宝">
+												<img src="/public/home/images/zhifubao.jpg">
+											</a>
+										</li><?php endif; ?>
+									<?php if($getConfigPri['wx_switch_pc'] == '1'): ?><li class="item weixin"  data-index="1" data-source="wx" data-title="微信支付">
+											<a href="javascript:void(0);" data-text="微信支付">
+												<img src="/public/home/images/weixin.jpg">
+											</a>
+										</li><?php endif; ?>
+									</ul>
+								</div>
+							</div>
+							<div class="row charge-submit clearfix">
+								<div class="content">
+									<?php if($getConfigPri['aliapp_pc'] == '1' OR $getConfigPri['wx_switch_pc'] == '1'): ?><a class="btn btn-submit" href="javascript:charge_submit();" >立即支付</a>
 									<?php else: ?>
-											<span><?php echo ($info['coin']); ?></span><?php endif; ?>
-									<a href="./index.php?m=Payment&a=index">充值</a>
+										<a class="btn btn-submit">本网站未开通支付</a><?php endif; ?>
+									<div class="charge-errormsg ">
+										<img src=""><span class="msg red"></span>
+									</div>
 								</div>
-							</li>
-							<li class="two">
-								<i></i>
-								<div>
-									<span><a target="_blank">赠送礼物</a>/<a target="_blank">收到礼物</a></span>
-									<span>
-										<b target="_blank" title="0个"><?php echo ($getgif['tsc']); ?></b>个/
-										<b target="_blank"title="0个"><?php echo ($getgif['tsd']); ?></b>个
-									</span>
-								</div>
-							</li>
-							<li class="three">
-								<a><i></i></a>
-								<div>
-									<span><a target="_blank">我的等级</a>/<a target="_blank">累计经验</a></span>
-									<span>
-										<b target="_blank"><?php echo ($level); ?></b>级/
-										<b target="_blank"><?php echo ($experience); ?></b>点
-									</span>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="shouyey"></div>
-			</div>
-		</div>
-  </div>
+							</div>
+				   
+					  
+						
+					   </li>
+					</ul>
+				</form>
+			</div>			
+        </div>
+    </div>
 </div>
+
+<div class="chargecover"></div>
+<div class="charge-pay-tip">
+    <div class="qrcode-container">
+    </div>
+    <div class="btn-group">
+        <a class="btn btn-complete" href="javascript:void(0);">支付完成</a>
+        <a class="btn btn-problem" target="_blank" href="http://bbs.360safe.com/forum.php?mod=viewthread&amp;tid=6999505&amp;page=1">遇到问题?</a>
+    </div>
+</div>
+<div class="charge-bankpay-tip">
+    <div class="title">
+        请支付订单
+        <a class="close modify" href="javascript:void(0);">×</a>
+    </div>
+    <div class="content">
+        <div class="tip">
+            请您在<strong class="timer"><span class="hour">2</span>小时<span class="minute">0</span>分<span class="second">0</span>秒</strong>内，在新打开的支付页面中完成支付...
+        </div>
+        <div class="btn-group">
+            <a class="btn btn-complete" href="javascript:void(0);">支付完成</a>
+            <a class="btn btn-problem" target="_blank" href="http://bbs.360safe.com/forum.php?mod=viewthread&amp;tid=6999505&amp;page=1">遇到问题?</a>
+        </div>
+        <div class="tail">
+            <a class="modify" href="javascript:void(0);">&lt;返回修改支付方式</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+   
+   
+   
+   
+   
 	<div id="doc-ft">
 		<div class="container">
 			<p class="footer">
@@ -286,88 +322,11 @@
 		<script type="text/javascript" src="/public/home/js/layer.js"></script> 
 
 
-<script type="text/javascript">
-//全局变量
-var GV = {
-    DIMAUB: "/",
-    JS_ROOT: "public/js/",
-    TOKEN: ""
-};
-$(function()
-{
-	  /* 时间控件 */
-     $("input.js-date").datePicker();
-}
-)
-</script>
-<script src="/public/js/jquery.js"></script>
-<script>
-$(function(){
-  //打开上传视频窗口
-  $('.dianji').click(function()
-	{
-		$("#datas").css('display','none');
-		$("#modify").css('display','block');
-  });  
-	$('.hersquxiao').click(function()
-	{
-		$("#modify").css('display','none');
-		$("#datas").css('display','block');
-  });
-  $('.hersbaocun').click(function()
-	{
-	  var name=$("#name").val();
-	  if(name!=""&&name!="请输入新昵称")
-		{ 
-			if(name.length>8)
-			{
-				layer.alert('昵称最多为八位', 
-				{
-					skin: 'layui-layer-molv' //样式类名
-					,closeBtn: 0,
-					shift: 5,
-					icon: 2,
-				}, function(){
-				layer.closeAll();
-				});
-			}
-			else
-			{
-				 $.getJSON("/index.php/Personal/edit_name/name/"+name+"/", {},
-        function(data)
-				{
-					if(data["state"]==0)
-					{
-					 	layer.alert('修改完成', 
-						{
-							skin: 'layui-layer-molv' //样式类名
-							,closeBtn: 0,
-							shift: 5,
-							icon: 1
-						}, function(){
-							window.location.href="";
-						});
-					}
-				});
-			}
-    }
-	  else
-	  {
-			layer.alert('昵称不能为空', 
-			{
-				skin: 'layui-layer-molv' //样式类名
-				,closeBtn: 0,
-				shift: 5,
-				icon: 2,
-			}, function(){
-			 layer.closeAll();
-			});
-	  }      
-  });
-	})
-</script>  
-<script src="/public/js/wind.js"></script>	
-<script type="text/javascript" src="/public/js/datePicker/datePicker.js"></script>
-<script type="text/javascript" src="/public/home/js/Personal.js"></script>  
+
+<script type="text/javascript" src="http://yunbaolivein.oss-cn-hangzhou.aliyuncs.com/yunbaozhibo/jquery.SuperSlide.2.1.1.js"></script>  
+<script type="text/javascript" src="/public/home/js/Payment.js"></script>
+
+
+
 </body>
 </html>

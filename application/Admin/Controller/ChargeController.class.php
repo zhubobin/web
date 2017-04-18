@@ -8,7 +8,6 @@ use Common\Controller\AdminbaseController;
 class ChargeController extends AdminbaseController {
     function index(){
 
-<<<<<<< HEAD
 		 if($_REQUEST['status']!=''){
 			  $map['status']=$_REQUEST['status'];
 				$_GET['status']=$_REQUEST['status'];
@@ -34,33 +33,6 @@ class ChargeController extends AdminbaseController {
 			 $map['uid|orderno|trade_no']=array("like","%".$_REQUEST['keyword']."%"); 
 			 $_GET['keyword']=$_REQUEST['keyword'];
 		 }
-=======
-					if($_REQUEST['status']!=''){
-						  $map['status']=$_REQUEST['status'];
-							$_GET['status']=$_REQUEST['status'];
-					 }
-				   if($_REQUEST['start_time']!=''){
-						  $map['addtime']=array("gt",strtotime($_REQUEST['start_time']));
-							$_GET['start_time']=$_REQUEST['start_time'];
-					 }
-					 
-					 if($_REQUEST['end_time']!=''){
-						 
-						   $map['addtime']=array("lt",strtotime($_REQUEST['end_time']));
-							 $_GET['end_time']=$_REQUEST['end_time'];
-					 }
-					 if($_REQUEST['start_time']!='' && $_REQUEST['end_time']!='' ){
-						 
-						 $map['addtime']=array("between",array(strtotime($_REQUEST['start_time']),strtotime($_REQUEST['end_time'])));
-						 $_GET['start_time']=$_REQUEST['start_time'];
-						 $_GET['end_time']=$_REQUEST['end_time'];
-					 }
- 
-					 if($_REQUEST['keyword']!=''){
-						 $map['uid|orderno|trade_no']=array("like","%".$_REQUEST['keyword']."%"); 
-						 $_GET['keyword']=$_REQUEST['keyword'];
-					 }
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 
     	$charge=M("users_charge");
     	$count=$charge->where($map)->count();

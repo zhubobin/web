@@ -34,7 +34,6 @@ class LevelController extends HomebaseController {
 		$this->display();
 	    
 	}
-<<<<<<< HEAD
 	
 	//2017/4/12
 	function index1(){
@@ -65,8 +64,6 @@ class LevelController extends HomebaseController {
 		$this->display();
 		 
 	}
-=======
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 
 
 }

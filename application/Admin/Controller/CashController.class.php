@@ -110,13 +110,9 @@ class CashController extends AdminbaseController {
 					 $result=$cash->save(); 
 					 if($result){
 						  if($_POST['status']=='2'){
-<<<<<<< HEAD
 								 //M("users")->where("id='".$_POST['uid']."'")->setInc("votes",$_POST['votes']);
 						  		M("users")->where("id='".$_POST['uid']."'")->setInc("guzi",$_POST['guzi']);
 						  		M("users")->where("id='".$_POST['uid']."'")->setInc("income",$_POST['guzi']);
-=======
-								 M("users")->where("id='".$_POST['uid']."'")->setInc("votes",$_POST['votes']);
->>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 							}
 						  $this->success('修改成功',U('Cash/index'));
 					 }else{
