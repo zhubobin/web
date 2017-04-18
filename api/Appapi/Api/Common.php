@@ -11,7 +11,11 @@ class Api_Common extends PhalApi_Api {
 		$redis = new Redis();
 		$redis -> pconnect($REDIS_HOST,6379);
 		$redis -> auth($REDIS_AUTH);
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		return $redis;
 	}
 	/* 设置缓存 */
@@ -101,6 +105,10 @@ class Api_Common extends PhalApi_Api {
 	/* 用户基本信息 */
 	public function getUserInfo($uid) {
 		$info=$this->getCache("userinfo_".$uid);
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		if(!$info){
 			$domain = new Domain_Common();
 			$info = $domain->getUserInfo($uid);				

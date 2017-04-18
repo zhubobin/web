@@ -45,4 +45,18 @@ class Domain_Home {
         return $rs;
     }
 
+<<<<<<< HEAD
+=======
+    public function getCityList($city) {
+
+        $rs = array();
+
+        $model = new Model_Home();
+        
+        $rs = $model->getCityList($city);
+                
+        return $rs;
+    }
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 }

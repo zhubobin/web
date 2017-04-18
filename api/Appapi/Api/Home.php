@@ -20,10 +20,20 @@ class Api_Home extends Api_Common {
             ),
 			
 			'search' => array(
+<<<<<<< HEAD
 				'uid' => array('name' => 'uid', 'type' => 'int', 'require' => true, 'min'=>1 ,'desc' => '用户ID'),
 				'key' => array('name' => 'key', 'type' => 'string', 'default'=>'' ,'desc' => '用户ID'),
 				'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
 			),
+=======
+                'uid' => array('name' => 'uid', 'type' => 'int', 'require' => true, 'min'=>1 ,'desc' => '用户ID'),
+                'key' => array('name' => 'key', 'type' => 'string', 'default'=>'' ,'desc' => '用户ID'),
+                'p' => array('name' => 'p', 'type' => 'int', 'default'=>'1' ,'desc' => '页数'),
+            ),
+            'getCityList' => array(    
+			),
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 		);
 	}
 	
@@ -45,6 +55,21 @@ class Api_Home extends Api_Common {
         return $rs;
     }	
 
+<<<<<<< HEAD
+=======
+    public function getCityList() {
+        $rs         =   array('code' => 0, 'msg' => '', 'info' => array()); 
+        $domain     =   new Domain_Home();
+        $this->city =   !empty($this->city)?$this->city:1;
+        $info       =   $domain->getCityList($this->city);
+        $rs['msg']  =   empty($info)?'获取列表失败':'获取列表ok';
+        $rs['info'][0] = $info;
+        $rs['code'] = 1;
+    
+        return $rs;
+    }   
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
     /**
      * 登录方式开关信息
      * @desc 用于获取登录方式开关信息

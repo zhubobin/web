@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 /* 
    扩展配置
  */
@@ -22,13 +23,57 @@ class ChargeSettingController extends AdminbaseController{
 		$this->display();
 	}
 	
+=======
+
+/**
+ * 充值规则
+ */
+namespace Admin\Controller;
+use Common\Controller\AdminbaseController;
+class ChargerSettingController extends AdminbaseController {
+
+		
+    function index(){
+    	$rules=M("charge_rules");
+    	$count=$rules->count();
+    	$page = $this->page($count, 20);
+    	$lists = $rules
+				->where()
+				->order("orderno asc")
+				->limit($page->firstRow . ',' . $page->listRows)
+				->select();
+    	$this->assign('lists', $lists);
+    	$this->assign("page", $page->show('Admin'));
+    	
+    	$this->display();
+    }		
+		
+	function del(){
+		$id=intval($_GET['id']);
+		if($id){
+			$result=M("charge_rules")->where("id='{$id}'")->delete();				
+				if($result){
+						$this->success('删除成功');
+				 }else{
+						$this->error('删除失败');
+				 }						
+		}else{				
+			$this->error('数据传入失败！');
+		}								  
+		$this->display();				
+	}		
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
     //排序
     public function listorders() { 
 		
         $ids = $_POST['listorders'];
         foreach ($ids as $key => $r) {
             $data['orderno'] = $r;
+<<<<<<< HEAD
             M("attribute")->where(array('id' => $key))->save($data);
+=======
+            M("charge_rules")->where(array('id' => $key))->save($data);
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
         }
 				
         $status = true;
@@ -37,6 +82,7 @@ class ChargeSettingController extends AdminbaseController{
         } else {
             $this->error("排序更新失败！");
         }
+<<<<<<< HEAD
     }		
 	
 	function set_post(){
@@ -180,3 +226,49 @@ class ChargeSettingController extends AdminbaseController{
 			}
 		}
 }
+=======
+    }	
+	
+    function add(){
+		$this->display();
+    }	
+	
+	function do_add(){
+		if(IS_POST){	
+			$rules=M("charge_rules");
+			$rules->create();
+			$rules->addtime=time();
+			 
+			$result=$rules->add(); 
+			if($result){
+				$this->success('添加成功');
+			}else{
+				$this->error('添加失败');
+			}
+		}				
+    }		
+    function edit(){
+		$id=intval($_GET['id']);
+		if($id){
+			$rules	=M("charge_rules")->where("id='{$id}'")->find();
+			$this->assign('rules', $rules);						
+		}else{				
+			$this->error('数据传入失败！');
+		}								      	
+    	$this->display();
+    }		
+	
+	function do_edit(){
+		if(IS_POST){			
+			 $rules=M("charge_rules");
+			 $rules->create();
+			 $result=$rules->save(); 
+			 if($result){
+				  $this->success('修改成功');
+			 }else{
+				  $this->error('修改失败');
+			 }
+		}	
+    }				
+}
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc

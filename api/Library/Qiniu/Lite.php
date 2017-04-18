@@ -38,6 +38,7 @@ class Qiniu_Lite {
     {
         $fileUrl = '';
 
+<<<<<<< HEAD
         if (!file_exists($filePath)) {
             return $fileUrl;
         }
@@ -58,6 +59,32 @@ class Qiniu_Lite {
                 array('Err' => $err->Err, 'Reqid' => $err->Reqid, 'Details' => $err->Details, 'Code' => $err->Code));
         } else {
             $fileUrl = $config['space_host'] . '/' . $fileName;
+=======
+        if (!file_exists($filePath)) { 
+            return $fileUrl;
+        }
+
+        $config = $this->config;    
+
+        $fileName = date('YmdHis_', $_SERVER['REQUEST_TIME']) 
+            . md5(PhalApi_Tool::createRandStr(8) . microtime(true));           
+        Qiniu_SetKeys($config['accessKey'], $config['secretKey']);
+        $putPolicy = new Qiniu_RS_PutPolicy($config['space_bucket']);
+        $upToken = $putPolicy->Token(null);
+
+        $putExtra = new Qiniu_PutExtra();
+        $putExtra->Crc32 = 1;
+
+        list($ret, $err) = Qiniu_PutFile($upToken, $fileName, $filePath, $putExtra);
+
+        if ($err !== null) {
+
+            DI()->logger->debug('failed to upload file to qiniu', 
+                array('Err' => $err->Err, 'Reqid' => $err->Reqid, 'Details' => $err->Details, 'Code' => $err->Code));   
+        } else {
+            $fileUrl = $config['space_host'] . '/' . $fileName;     
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
             DI()->logger->debug('succeed to upload file to qiniu', $ret);
         }
 

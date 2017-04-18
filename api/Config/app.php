@@ -37,7 +37,12 @@ return array(
      */
     'UCloud' => array(
         //对应的文件路径
+<<<<<<< HEAD
         'host' => 'http://live.yunbaozhibo.com/api/public/upload' 
+=======
+        //'host' => 'http://live.yunbaozhibo.com/api/public/upload' 
+        'host' => 'http://www.web.com/api/public/upload'
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
     ),
 		
 		/**

@@ -257,18 +257,32 @@ function Qiniu_Client_CallNoRet($self, $url) // => $error
 
 function Qiniu_Client_CallWithForm(
 	$self, $url, $params, $contentType = 'application/x-www-form-urlencoded') // => ($data, $error)
+<<<<<<< HEAD
 {
+=======
+	{
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 	$u = array('path' => $url);
 	if ($contentType === 'application/x-www-form-urlencoded') {
 		if (is_array($params)) {
 			$params = http_build_query($params);
 		}
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 	$req = new Qiniu_Request($u, $params);
 	if ($contentType !== 'multipart/form-data') {
 		$req->Header['Content-Type'] = $contentType;
 	}
+<<<<<<< HEAD
 	list($resp, $err) = $self->RoundTrip($req);
+=======
+
+	list($resp, $err) = $self->RoundTrip($req);
+
+>>>>>>> 44957bbe60877878268fbcc85720e0bd31ebe8bc
 	if ($err !== null) {
 		return array(null, $err);
 	}
