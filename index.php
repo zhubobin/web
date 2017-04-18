@@ -1,4 +1,4 @@
-?php
+<?php
 /**
  * 入口文件
  * Some rights reserved：www.thinkcmf.com
