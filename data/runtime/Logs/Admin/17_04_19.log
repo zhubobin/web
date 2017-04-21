@@ -1,0 +1,7 @@
+[ 2017-04-19T17:13:26+08:00 ] 192.168.13.1 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '192.168.1.109' (13)
+

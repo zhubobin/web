@@ -64,10 +64,14 @@
 		<script type="text/javascript" src="/public/home/hxChat/js/webim.js"></script>
 
 		<!-- 环信私信功能end -->
-<title><?php echo ($site_name); ?></title>
+
+<title><?php echo ($site_seo_title); ?> - <?php echo ($site_name); ?></title>
+
+<link type="text/css" rel="stylesheet" href="/public/home/css/index.css"/>
 </head>
-<body style="background-color:#f3f3f3">
-	<div id="doc-hd" class="header double">
+<body>
+<div class="wrapper">
+		<div id="doc-hd" class="header double">
 		<div class="topbar">
 			<div class="container clearfix">
 				<div class="hd-logo">
@@ -151,118 +155,84 @@
 	</div>
 
 
-<link type="text/css" rel="stylesheet" href="/public/home/css/common.css"/>
-<link type="text/css" rel="stylesheet" href="/public/home/css/Personal.css"/>
-<link type="text/css" rel="stylesheet" href="/public/home/css/font-awesome.min.css"/>
-<div class="headers">
-  <div class="container" style="padding-top:20px">
-    <div class="hersleft">
-			<a href="index.php?m=Personal&a=photo" style="display:inline-block;height:88px">
-				<img src="<?php echo ($info['avatar']); ?>" alt="" class="herszhezhao">
-				<i class="herszhezhao">
-				</i>
-			</a>
-		</div>
-		<div class="hersright">
-			<div style="display:black" id="datas">
-				<div>
-					<span><?php echo ($info['user_nicename']); ?></span>
-					<i class="dianji" id="dianji"></i>
-				</div>
-				<p title="<?php echo ($info['user_login']); ?>">个人账号：<?php echo ($info['user_login']); ?></p>
-			</div>
-			<div style="display:none" id="modify">
-				<input id="name" placeholder="请输入新昵称">
-				<p>
-					<span class="hersbaocun" >保存</span>
-					<span class="hersquxiao">取消</span>
-				</p>
-			</div>
-		</div>
-  </div>
-</div>
-<div class="container">
-	<div class="Firstfloor">
-		<div class="Leftlayout">
-			<ul id="accordion" class="accordion">
-	    <li>
-	      <a class="homepage"  href="index.php?m=Personal&a=index"><!-- <i class="fa fa-paint-brush"></i> -->我的首页
-		  </a>
-		</li>
-		<li <?php if($personal == 'Set'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link" >账号设置<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'Set'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=modify">基本资料</a></li>
-				<li><a href="index.php?m=Personal&a=photo">修改头像</a></li>
-				<li><a href="index.php?m=Personal&a=updatepass">修改密码</a></li>
-			</ul>
-		</li>
-		<li <?php if($personal == 'follow'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link">我的社交<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'follow'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=follow">我的关注</a></li>
-				<li><a href="index.php?m=Personal&a=fans">我的粉丝</a></li>
-				<li><a href="index.php?m=Personal&a=namelist">我的黑名单</a></li>
-				<li><a href="index.php?m=Personal&a=admin">我的管理员</a></li>
-				<li><a href="index.php?m=Personal&a=live">我的直播</a></li>
-			</ul>
-		</li>
-		<li <?php if($personal == 'card'): ?>class="gangkaishi open"<?php else: ?>class="gangkaishi"<?php endif; ?>>
-			<div class="link">我的认证<i class="fa fa-chevron-down"></i></div>
-			<ul <?php if($personal == 'card'): ?>class="submenu pedisplay"<?php else: ?>class="submenu"<?php endif; ?>>
-				<li><a href="index.php?m=Personal&a=card">我要认证</a></li>
-				<li><a href="index.php?m=Personal&a=exchange">提现中心</a></li>
-			</ul>
-		</li>
-	</ul>
-		</div>
-		<div class="rightlayout">
-			<div class="clearfix">
-				<div class="shouyez">
-					<h3 class="personal_h3">
-						<i class="h3_one"></i>
-						我的账户资产
-					</h3>
-					<div>
-						<ul>
-							<li style="border-left:0 none" class="one">
-								<i></i>
-								<div>
-									<span><?php echo ($getConfigName['name_coin']); ?></span>
-									<?php if($info['coin'] == ''): ?><span>0</span>
+	<div id="doc-bd">
+		<div class="container clearfix">
+			<div class="main clearfix">
+				<!-- 分类推荐 -->
+				<div class="g-box feed-list" >
+
+					<div class="box-bd">
+						<ul class="list">
+
+							<?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li class="feed <?php if($v['islive'] == '1'): ?>live<?php else: endif; ?>"><a class="link" href="./<?php echo ($v['uid']); ?>" target="_blank"><img class="screenshot thumb" src="/public/home/images/lazyload.png" data-original="<?php echo ($v['thumb']); ?>"/>
+							<p class="user">
+								<img class="avatar thumb" src="/public/home/images/lazyload.png" data-original="<?php echo ($v['avatar']); ?>"/><span class="username"><?php echo ($v['user_nicename']); ?></span>
+							</p>
+							<div class="comment">
+								<div class="comment-inner">
+									<?php if($v['liveinfo']['title']): echo ($v['liveinfo']['title']); ?>
 									<?php else: ?>
-											<span><?php echo ($info['coin']); ?></span><?php endif; ?>
-									<a href="./index.php?m=Payment&a=index">充值</a>
+										此处应该有互动<?php endif; ?>
 								</div>
-							</li>
-							<li class="two">
-								<i></i>
-								<div>
-									<span><a target="_blank">赠送礼物</a>/<a target="_blank">收到礼物</a></span>
-									<span>
-										<b target="_blank" title="0个"><?php echo ($getgif['tsc']); ?></b>个/
-										<b target="_blank"title="0个"><?php echo ($getgif['tsd']); ?></b>个
-									</span>
-								</div>
-							</li>
-							<li class="three">
-								<a><i></i></a>
-								<div>
-									<span><a target="_blank">我的等级</a>/<a target="_blank">累计经验</a></span>
-									<span>
-										<b target="_blank"><?php echo ($level); ?></b>级/
-										<b target="_blank"><?php echo ($experience); ?></b>点
-									</span>
-								</div>
-							</li>
+							</div>
+							</a></li><?php endforeach; endif; else: echo "" ;endif; ?>
 						</ul>
 					</div>
+					<?php echo ($page); ?>
 				</div>
-				<div class="shouyey"></div>
+			</div>
+			<div class="side clearfix">
+				<div class="download">
+					<div class="headline">
+						<a href="#" target="_blank"><img src="http://p0.qhimg.com/t012fba3e01107b75a7.jpg" width="100%" alt=""/>
+						<div class="logo-slogan">
+						</div>
+						</a>
+					</div>
+					<div class="btns clearfix">
+						<a href="<?php echo ($config['app_android']); ?>" class="btn-android" target="_blank"></a>
+						<a href="<?php echo ($config['app_ios']); ?>" class="btn-iphone" target="_blank"></a>
+					</div>
+					<dl class="qrcode">
+						<dt class="title">
+						<span>或扫描二维码下载直播APP</span>
+						</dt>
+						<dd class="pic">
+						<img src="<?php echo ($config['qr_url']); ?>" alt=""/>
+						</dd>
+					</dl>
+				</div>
+				<div class="sidebar">
+					<div class="g-box" id="topic-plan">
+						<div class="box-hd">
+							<h2 class="box-title"><span class="icon"></span>专题策划1</h2>
+							<a href="" class="box-more"></a>
+						</div>
+						<div class="box-bd">
+							<div class="topic">
+								<div class="pic">
+									<a href="<?php echo ($ads[0]['url']); ?>" target="_blank"><img src="<?php echo ($ads[0]['thumb']); ?>" width="245" height="130" alt=""/><span class="mask"></span></a>
+								</div>
+								<div class="content">
+									<h3 class="title"><a href="<?php echo ($ads[0]['url']); ?>" target="_blank"><?php echo ($ads[0]['name']); ?></a></h3>
+									<p class="desc">
+										<?php echo ($ads[0]['des']); ?>
+									</p>
+									<p class="more">
+										<a href="<?php echo ($ads[0]['url']); ?>" target="_blank">查看详情</a>
+									</p>
+								</div>
+							</div>
+							<ul class="topics">
+							  <?php if(is_array($ads)): $i = 0; $__LIST__ = array_slice($ads,1,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($v['url']); ?>" target="_blank"><img src="<?php echo ($v['thumb']); ?>"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-  </div>
-</div>
+	</div>
 	<div id="doc-ft">
 		<div class="container">
 			<p class="footer">
@@ -286,88 +256,22 @@
 		<script type="text/javascript" src="/public/home/js/layer.js"></script> 
 
 
-<script type="text/javascript">
-//全局变量
-var GV = {
-    DIMAUB: "/",
-    JS_ROOT: "public/js/",
-    TOKEN: ""
-};
-$(function()
-{
-	  /* 时间控件 */
-     $("input.js-date").datePicker();
-}
-)
-</script>
-<script src="/public/js/jquery.js"></script>
+	<!--
+下线时将下面div元素的style改为"display:none;"
+上线时将下面div元素的style改为"display:block;"
+图片尺寸100X100
+-->
+	<div id="right-fixed-position" class="right-fixed-position" style="display:none;" >
+		<a href="#" class="close"></a>
+		<a href="#" class="link" target="_blank"><img src="#"/></a>
+	</div>
+</div>
 <script>
 $(function(){
-  //打开上传视频窗口
-  $('.dianji').click(function()
-	{
-		$("#datas").css('display','none');
-		$("#modify").css('display','block');
-  });  
-	$('.hersquxiao').click(function()
-	{
-		$("#modify").css('display','none');
-		$("#datas").css('display','block');
-  });
-  $('.hersbaocun').click(function()
-	{
-	  var name=$("#name").val();
-	  if(name!=""&&name!="请输入新昵称")
-		{ 
-			if(name.length>8)
-			{
-				layer.alert('昵称最多为八位', 
-				{
-					skin: 'layui-layer-molv' //样式类名
-					,closeBtn: 0,
-					shift: 5,
-					icon: 2,
-				}, function(){
-				layer.closeAll();
-				});
-			}
-			else
-			{
-				 $.getJSON("/index.php/Personal/edit_name/name/"+name+"/", {},
-        function(data)
-				{
-					if(data["state"]==0)
-					{
-					 	layer.alert('修改完成', 
-						{
-							skin: 'layui-layer-molv' //样式类名
-							,closeBtn: 0,
-							shift: 5,
-							icon: 1
-						}, function(){
-							window.location.href="";
-						});
-					}
-				});
-			}
-    }
-	  else
-	  {
-			layer.alert('昵称不能为空', 
-			{
-				skin: 'layui-layer-molv' //样式类名
-				,closeBtn: 0,
-				shift: 5,
-				icon: 2,
-			}, function(){
-			 layer.closeAll();
-			});
-	  }      
-  });
-	})
-</script>  
-<script src="/public/js/wind.js"></script>	
-<script type="text/javascript" src="/public/js/datePicker/datePicker.js"></script>
-<script type="text/javascript" src="/public/home/js/Personal.js"></script>  
+	//图片延迟加载
+	$("img.thumb").lazyload({effect: "fadeIn"});		
+})
+</script>
+
 </body>
 </html>

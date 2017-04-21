@@ -260,8 +260,8 @@ class Api_User extends Api_Common {
 	 * @return string msg 提示信息
 	 */
 	public function getTest(){
-		
-		//pd($this);
+	
+		pd(18);
 		
 	}
 	/**
