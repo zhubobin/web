@@ -1720,3 +1720,182 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000292s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000333s ]
 
+[ 2017-04-21T15:15:11+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000379s ]
+
+[ 2017-04-21T15:15:16+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-04-21T15:17:33+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-04-21T15:17:36+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000267s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000308s ]
+
+[ 2017-04-21T17:06:10+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-04-21T17:06:12+08:00 ] 192.168.13.1 /index.php/Personal/edit_exchange/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `token`,`expiretime` FROM `cmf_users` WHERE ( id =7927 and user_type='2' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-04-21T17:06:13+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-04-21T17:06:15+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000357s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-04-21T17:06:17+08:00 ] 192.168.13.1 /index.php?g=home&m=user&a=threeparty
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `cmf_config` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_users` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `cmf_config_private` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`avatar`,`avatar_thumb`,`sex`,`signature`,`consumption`,`votestotal`,`province`,`city`,`coin`,`votes`,`token`,`birthday`,`issuper` FROM `cmf_users` WHERE ( id='7927' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `cmf_config_private` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
